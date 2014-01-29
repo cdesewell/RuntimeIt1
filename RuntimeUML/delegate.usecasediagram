@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="45286f5c-a11d-4e7b-bf6f-a953fe7fd23a" name="delegate" linkedPackageId="4a61eaac-72c6-4642-94f9-cc10c223f43a" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="0faf9dee-8e98-47ac-9357-f8e2922f938a">
+      <profileInstance Id="7f32b1fa-163a-4325-93ff-c9a3b5f32ade" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="1df76263-08ae-48db-8b3a-5d513d1af3cf">
+      <profileInstance Id="a9123bdb-4c78-4014-96b6-59206f57c16d" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="42ae8db7-2a94-4f1c-aa86-2751d3813b6e" name="Problem delegator" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3df78a39-2322-42c8-abd3-7369655692ee" />
+        <targetEnds>
+          <association Id="49e95573-33b7-4738-916d-89e07c0a1cc4" isDerived="false" sourceEndRoleName="Problem delegator" targetEndRoleName="Define new problem" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d8feefa5-2277-4902-bbea-720e56b17a29" LastKnownName="Define new problem" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="83c6bcad-27cb-4cc9-9a20-96acbf00da6e" name="Problem delegator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="62724e76-ec61-47b6-9ed6-110b25359948" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="201576f2-54c3-47fd-bb66-9c2e9fb0ece6" name="Define new problem" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d42a784d-90d5-40a1-9968-ec0867eb9959" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="db224502-ac4b-4c78-9dd9-ea3c1a810b90" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d8feefa5-2277-4902-bbea-720e56b17a29" name="Define new problem" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e871d60f-2954-44ca-96ff-6767c5305bf5" />
+        <subjects>
+          <subsystemMoniker Id="e4967885-6ba2-430e-bed6-4b827ecd330e" LastKnownName="Delegate controller" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="e4967885-6ba2-430e-bed6-4b827ecd330e" name="Delegate controller" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="81c66d65-db0b-4c9d-925b-aa36fa13387d" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="5b8fe12c-7d40-4672-86bf-75c0f9efc7cd" name="Parse request" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f0ee08d1-d36e-4f1e-8658-f6b868c32381" />
+        <additions>
+          <include Id="1cb4b279-ca94-49b5-8348-4488b9b573b9">
+            <useCaseMoniker Id="d8feefa5-2277-4902-bbea-720e56b17a29" LastKnownName="Define new problem" />
+            <elementDefinition Id="d1fb23ac-f91e-4802-b6ac-cf042ffbc43e" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="e4967885-6ba2-430e-bed6-4b827ecd330e" LastKnownName="Delegate controller" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="a9a9ffef-8215-447d-b5d2-0614cb83bda5" name="Persist problem definition" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0a171836-aec4-4add-ba79-b3cbd4a641a8" />
+        <additions>
+          <include Id="cc75a0cb-e1c6-4dd5-b4ad-07b79dcf6638">
+            <useCaseMoniker Id="d8feefa5-2277-4902-bbea-720e56b17a29" LastKnownName="Define new problem" />
+            <elementDefinition Id="2e88820e-6089-4de3-8654-fb5c50166477" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="e4967885-6ba2-430e-bed6-4b827ecd330e" LastKnownName="Delegate controller" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="4762e7c2-37e2-4ec7-9076-58e51a518f52" name="Delegate controller" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a6453841-95ef-4f7c-9058-9ca2b88079ba" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="bd7739ae-2aff-4cb6-83bc-8de6e00f7823" name="Problem delegator" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c7286902-6d1d-4273-8514-c4cc76d66f65" />
+        <targetEnds>
+          <association Id="20ef3521-e6aa-4fbc-8f2d-8011c0c984a3" isDerived="false" sourceEndRoleName="Problem delegator" targetEndRoleName="Solve problem" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9b116b07-6e2a-4a15-a233-0bcbb7efbf58" LastKnownName="Solve problem" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8d5e9da9-24d7-4ff3-81fa-e83b392d6058" name="Problem delegator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e0e296dd-7c41-4cd3-905b-2b65e555e067" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cc3cb8be-a70f-4686-9bf1-6fd118d686e1" name="Solve problem" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="94e02def-764e-4aed-bfa5-8190fd8134cd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="aefcf0b7-8a79-4690-9f7a-2aeed5ba2587" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="9b116b07-6e2a-4a15-a233-0bcbb7efbf58" name="Solve problem" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d9bdcb9d-7051-4141-b510-e3ac6fca49c1" />
+        <extendedCases>
+          <extend Id="b6e01116-ae25-44a9-a541-73e48f93cb9d">
+            <useCaseMoniker Id="bc11e95c-3a22-438c-9f1d-b358f1cef5af" LastKnownName="Execute runtime" />
+            <elementDefinition Id="f799bbf6-6e41-48d7-94af-61e2f9ddc2eb" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="4762e7c2-37e2-4ec7-9076-58e51a518f52" LastKnownName="Delegate controller" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="94a95591-6fbb-437c-baf6-4cb7e3a92e32" name="Parse request" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="22838f3c-c587-4c1b-86ec-0aa7a0292f7c" />
+        <additions>
+          <include Id="fd490389-1e5c-4a90-9d03-f2579d1e8d00">
+            <useCaseMoniker Id="9b116b07-6e2a-4a15-a233-0bcbb7efbf58" LastKnownName="Solve problem" />
+            <elementDefinition Id="10492cab-140a-4a96-9559-1af8625e09a0" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="4762e7c2-37e2-4ec7-9076-58e51a518f52" LastKnownName="Delegate controller" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="bc11e95c-3a22-438c-9f1d-b358f1cef5af" name="Execute runtime" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c803e607-eaa0-4426-9fbd-30b34a08ad28" />
+        <subjects>
+          <subsystemMoniker Id="4762e7c2-37e2-4ec7-9076-58e51a518f52" LastKnownName="Delegate controller" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="7d735748-907a-41f3-81f2-af189badc2b2" name="Search problem definition" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="80ac024f-b6d8-466c-ba5a-4319a177869a" />
+        <additions>
+          <include Id="65c3d53d-7919-4a8a-b7d1-6a0c31779fe3">
+            <useCaseMoniker Id="9b116b07-6e2a-4a15-a233-0bcbb7efbf58" LastKnownName="Solve problem" />
+            <elementDefinition Id="2680ca55-0b26-4cd8-83ce-17f02b041ade" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="4762e7c2-37e2-4ec7-9076-58e51a518f52" LastKnownName="Delegate controller" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="42f27ef3-029b-49a8-b747-230d522ad015" name="Compile response" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e265de50-e5d8-4071-bb3b-b396b02ba3c9" />
+        <additions>
+          <include Id="36d959fe-9137-461d-9b43-2445da62f64e">
+            <useCaseMoniker Id="9b116b07-6e2a-4a15-a233-0bcbb7efbf58" LastKnownName="Solve problem" />
+            <elementDefinition Id="d055f6e2-320d-42ee-bbd9-0cad89ee3231" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="4762e7c2-37e2-4ec7-9076-58e51a518f52" LastKnownName="Delegate controller" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="55584b4a-0e00-4fcd-8209-5f0e78f0a2f4" name="Compile response" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d8bfe7df-8cc6-48fb-8942-9ca570a4be7f" />
+        <additions>
+          <include Id="1f24f668-6232-41d0-b581-a97c0081bf02">
+            <useCaseMoniker Id="d8feefa5-2277-4902-bbea-720e56b17a29" LastKnownName="Define new problem" />
+            <elementDefinition Id="dac849d8-6533-4007-b5ea-ecb992346180" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="e4967885-6ba2-430e-bed6-4b827ecd330e" LastKnownName="Delegate controller" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="4a61eaac-72c6-4642-94f9-cc10c223f43a" name="RuntimeUML">
+    <elementDefinition Id="58523316-dad1-4ff4-91c0-3fd7ca162ff1" />
+  </package>
+</useCaseModelRoot>

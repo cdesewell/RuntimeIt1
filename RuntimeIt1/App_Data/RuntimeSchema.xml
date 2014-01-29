@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<runtime name="JavaScript">
+<operand name="Add" symbol="+" />
+<operand name="Subtract" symbol="-" />
+<operand name="Multiply" symbol="*" />
+<operand name="Divide" symbol="/" />
+<operand name="Modulus" symbol="%" />
+<operand name="Power" symbol="^" />
+</runtime>
+
+
