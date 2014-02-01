@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="cedbb578-d64d-4e62-b354-12150c58bace" name="delegator" linkedPackageId="a91ed1fb-dfae-4e03-8bdb-c77e289e1f4b" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="784a13dd-2629-4c06-97db-35090163a988" name="Problem delegator" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3fcb7a97-ca71-4b5b-8603-9e7230dfd37c" />
+        <targetEnds>
+          <association Id="3367f683-5b7c-4d28-bac3-dd5fe1531c90" isDerived="false" sourceEndRoleName="Problem delegator" targetEndRoleName="Solve problem" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f33edf18-28d9-4e52-9479-05f7c2b1f6b1" LastKnownName="Solve problem" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3b2ad382-407b-4ff3-a805-23a33b1b2aea" name="Problem delegator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="dd67ae71-3715-4207-a957-e157c74ed498" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="06604201-1604-420a-a7e4-b8eaeb284851" name="Solve problem" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3249de48-5791-4403-a26b-859e7106adf1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6af194c1-9a48-42df-8890-faa7691f7750" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="d1a38332-9535-4a1d-884a-0399ec60b67c" name="Resource contstrained system" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d9b525f5-f3a9-49e9-9d8f-0f77bbc681ed" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="2f5dae82-cba8-4b0d-abbe-083ce7758431" name="Poll CPU" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3b5f5305-3fe8-4aca-8dd1-c6f3e06fb17c" />
+        <additions>
+          <include Id="bf50e344-46d4-49c2-ac80-2b7959290bc8">
+            <useCaseMoniker Id="f33edf18-28d9-4e52-9479-05f7c2b1f6b1" LastKnownName="Solve problem" />
+            <elementDefinition Id="0c1f9f87-0e36-4318-b855-13ded6f3e447" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="d1a38332-9535-4a1d-884a-0399ec60b67c" LastKnownName="Resource contstrained system" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="b81be3c7-3017-4cd6-af4e-0b7824eb04c2" name="Compile request" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="225e2edd-c548-4850-ada2-682ec33fc206" />
+        <subjects>
+          <subsystemMoniker Id="d1a38332-9535-4a1d-884a-0399ec60b67c" LastKnownName="Resource contstrained system" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="f33edf18-28d9-4e52-9479-05f7c2b1f6b1" name="Solve problem" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0b0ef9d1-1e30-4979-b541-1dc9a1137f98" />
+        <extendedCases>
+          <extend Id="eef06773-f274-4fc0-bed2-85ca609e31d3">
+            <useCaseMoniker Id="ce89fe2c-9522-4e24-b25f-e67d517fb453" LastKnownName="Delegate problem" />
+            <elementDefinition Id="3d7f8aba-b5ba-47a7-923c-8f97abacd624" />
+          </extend>
+          <extend Id="1dfc7839-54cd-4f76-b854-37777413eb35">
+            <useCaseMoniker Id="41f35914-08e6-43c0-9422-07a0c833d9f2" LastKnownName="Solve problem" />
+            <elementDefinition Id="6171d64f-778e-4701-892f-826872f67b1a" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="d1a38332-9535-4a1d-884a-0399ec60b67c" LastKnownName="Resource contstrained system" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="5e1b21c8-b34f-40e3-b2cd-0fcddd567438" name="Problem delegate" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3e0e8e3a-a2b3-4a68-9694-df96268a4bd4" />
+        <targetEnds>
+          <association Id="65392cd3-230b-4f74-af9d-1568a44a02e5" isDerived="false" sourceEndRoleName="Problem delegate" targetEndRoleName="Delegate problem" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ce89fe2c-9522-4e24-b25f-e67d517fb453" LastKnownName="Delegate problem" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="743362a4-2e95-4eed-8fc6-7927affc849e" name="Problem delegate" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="73a46a86-b01b-4cd8-a1c0-3a432488674a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f60424e2-ab9f-4b2c-ac26-737105f6e73b" name="Delegate problem" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9990f70b-ad4b-4a6a-b708-40708bd65507" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="273202a7-5d13-4d0a-b0b1-8dc899cbb17a" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="ce89fe2c-9522-4e24-b25f-e67d517fb453" name="Delegate problem" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c5cce7fb-a7ee-4a7c-a900-1229c1502f19" />
+        <additions>
+          <include Id="174d2528-3131-433b-a4fd-7364c93ab8e4">
+            <useCaseMoniker Id="b81be3c7-3017-4cd6-af4e-0b7824eb04c2" LastKnownName="Compile request" />
+            <elementDefinition Id="4c596658-b6ad-41f8-9420-e2c5845b8514" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="d1a38332-9535-4a1d-884a-0399ec60b67c" LastKnownName="Resource contstrained system" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="41f35914-08e6-43c0-9422-07a0c833d9f2" name="Solve problem" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2b8930e7-ddcf-4a0d-99ab-19fd30584eae" />
+        <subjects>
+          <subsystemMoniker Id="d1a38332-9535-4a1d-884a-0399ec60b67c" LastKnownName="Resource contstrained system" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="a91ed1fb-dfae-4e03-8bdb-c77e289e1f4b" name="RuntimeUML">
+    <elementDefinition Id="58523316-dad1-4ff4-91c0-3fd7ca162ff1" />
+    <profileInstances>
+      <packageHasProfileInstances Id="9fd6ac5b-d038-423c-923a-087492d9039f">
+        <profileInstance Id="fb09adf7-b763-49b6-81a9-8482a3949d66" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="96685f50-fd22-49c3-a129-eb1f3df26e96">
+        <profileInstance Id="33a51ac6-12a5-4302-a6c6-e23a7e22ad92" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

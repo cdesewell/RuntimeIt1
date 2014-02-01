@@ -15,12 +15,25 @@ namespace RuntimeIt1
             config.MapHttpAttributeRoutes();
 
 
+
+
             config.Routes.MapHttpRoute(
-                name: "Problem",
-                routeTemplate: "api/runtime/{problem}/{*variables}",
-                defaults: new { controller = "runtime", action = "SolveProblem" }
+                name: "RuntimeFunctions",
+                routeTemplate: "api/runtime",
+                defaults: new { controller = "runtime", action = "GetFunctions" }
                 );
 
+            config.Routes.MapHttpRoute(
+                name: "ProblemParameters",
+                routeTemplate: "api/runtime/{problem}",
+                defaults: new { controller = "runtime", action = "GetParameters" }
+                );
+
+            config.Routes.MapHttpRoute(
+                name: "ProblemDelegation",
+                routeTemplate: "api/runtime/{problem}/{*variables}",
+                defaults: new { controller = "runtime", action = "GetSolution" }
+                );
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

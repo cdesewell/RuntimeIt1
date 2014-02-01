@@ -39,7 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Jurassic">
-      <HintPath>..\..\Jurassic\Jurassic.dll</HintPath>
+      <HintPath>..\..\..\Visual Studio 2013\Jurassic\Jurassic.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Net.Http" />
@@ -110,11 +110,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Controllers\ProblemDictinary.cs" />
+    <Compile Include="Logging\ServiceLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="UML Class\Configuration.cd" />
     <None Include="Properties\PublishProfiles\runtime - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\runtime - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">

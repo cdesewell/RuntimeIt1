@@ -23,6 +23,9 @@
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
     <Folder Include="ModelDefinition\" />
+    <Content Include="Configuration.cd">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="delegate.sequencediagram">
       <SubType>Content</SubType>
     </Content>
@@ -43,6 +46,13 @@
     <Content Include="delegater.sequencediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>delegater.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="delegator.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="delegator.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>delegator.usecasediagram</DependentUpon>
     </Content>
     <Content Include="ModelDefinition\RuntimeUML.uml">
       <SubType>Content</SubType>

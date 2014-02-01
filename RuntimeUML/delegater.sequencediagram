@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="42778506-3dd2-4c17-ab71-9e1c1dfbd393" name="delegator" linkedPackageId="6d7aee19-9202-4aae-8ed2-2a7172055771" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="42778506-3dd2-4c17-ab71-9e1c1dfbd393" name="delegator" linkedPackageId="6d7aee19-9202-4aae-8ed2-2a7172055771" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="5df6ab88-af82-4d8d-914c-e001cbddd557" name="delegator" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -78,72 +78,10 @@ too high</body>
               <lifelineMoniker Id="d0ac89f9-4dbd-4df6-a7c2-e1d0cf7f2b67" LastKnownName="CPU metrics" />
             </covered>
           </executionOccurrenceSpecification>
-          <behaviorExecutionSpecification Id="6caa3aaa-5218-49af-989a-3b390324d567" name="BehaviorExecutionSpecification2">
-            <elementDefinition Id="77e242f0-6e2e-4216-a0c7-0d7a36a7f458" />
-            <coveredLifelines>
-              <lifelineMoniker Id="c024420b-8151-4f2e-aabc-dee52cd8a59b" LastKnownName="Problem Dictionary" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker Id="d2d3144c-2ed3-4f0a-b422-95d2e05cc0f7" LastKnownName="ExecutionOccurrenceSpecification4" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker Id="06a073ae-3789-4608-8372-677817a765ad" LastKnownName="ExecutionOccurrenceSpecification3" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker Id="5303720c-136b-45be-8801-57f7c4f8f4e4" LastKnownName="MessageOccurrenceSpecification6" />
-              <messageOccurrenceSpecificationMoniker Id="fba28ef1-5981-4479-8ddf-b4f60f49a0f7" LastKnownName="MessageOccurrenceSpecification7" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification Id="06a073ae-3789-4608-8372-677817a765ad" name="ExecutionOccurrenceSpecification3">
-            <elementDefinition Id="cc7f95f9-e894-4a6a-a000-18d3d87e5b48" />
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="897acc28-237c-41f3-be56-32f4b13fe3d2" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker Id="c024420b-8151-4f2e-aabc-dee52cd8a59b" LastKnownName="Problem Dictionary" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="913625ef-37df-472b-bda2-ffac0de0d8e4" name="MessageOccurrenceSpecification5">
-            <elementDefinition Id="fd5482fa-2877-4987-80b0-03f92ef291b2" />
-            <covered>
-              <lifelineMoniker Id="c8cda517-b7a7-4c1b-9c58-e2a22a07c186" LastKnownName="Application Logic" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="5303720c-136b-45be-8801-57f7c4f8f4e4" name="MessageOccurrenceSpecification6">
-            <elementDefinition Id="aa648f0e-2dd7-44e2-97d5-337fe4b4b716" />
-            <covered>
-              <lifelineMoniker Id="c024420b-8151-4f2e-aabc-dee52cd8a59b" LastKnownName="Problem Dictionary" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="fba28ef1-5981-4479-8ddf-b4f60f49a0f7" name="MessageOccurrenceSpecification7">
-            <elementDefinition Id="002f2563-710a-4daa-b5f3-adbc1ffc5bf5" />
-            <covered>
-              <lifelineMoniker Id="c024420b-8151-4f2e-aabc-dee52cd8a59b" LastKnownName="Problem Dictionary" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="a0cb65ec-ea46-4c16-95a0-f793e271560f" name="MessageOccurrenceSpecification8">
-            <elementDefinition Id="aa97e494-0980-4cfe-809b-caa607819a2a" />
-            <covered>
-              <lifelineMoniker Id="c8cda517-b7a7-4c1b-9c58-e2a22a07c186" LastKnownName="Application Logic" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification Id="d2d3144c-2ed3-4f0a-b422-95d2e05cc0f7" name="ExecutionOccurrenceSpecification4">
-            <elementDefinition Id="7715b399-599b-4633-b0c7-9772ed805b5b" />
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="ffbc697d-629d-40dc-801a-be4a029860d2" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker Id="c024420b-8151-4f2e-aabc-dee52cd8a59b" LastKnownName="Problem Dictionary" />
-            </covered>
-          </executionOccurrenceSpecification>
           <behaviorExecutionSpecification Id="d6fd0cc4-4a55-4909-9100-a03346c61a94" name="BehaviorExecutionSpecification4">
             <elementDefinition Id="64ac0989-887f-4743-b05c-ff1c35753a6b" />
             <coveredLifelines>
-              <lifelineMoniker Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" LastKnownName="Problem Ambasador" />
+              <lifelineMoniker Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" LastKnownName="Problem Driver" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="939a68a3-e0d1-4051-8b8d-9cc30ff170e9" LastKnownName="ExecutionOccurrenceSpecification8" />
@@ -166,19 +104,19 @@ too high</body>
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" LastKnownName="Problem Ambasador" />
+              <lifelineMoniker Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" LastKnownName="Problem Driver" />
             </covered>
           </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="1eafec94-86d4-4cb2-b170-08cb219540ef" name="MessageOccurrenceSpecification12">
+            <elementDefinition Id="4089ec3b-cf0d-426f-8f0d-ad1fe0db37a6" />
+            <covered>
+              <lifelineMoniker Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" LastKnownName="Problem Driver" />
+            </covered>
+          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="fd96e3c6-9088-4c64-9ff9-dce7f79d5b79" name="MessageOccurrenceSpecification11">
             <elementDefinition Id="82823901-891e-4c8c-9ad2-1f9380665154" />
             <covered>
               <lifelineMoniker Id="c8cda517-b7a7-4c1b-9c58-e2a22a07c186" LastKnownName="Application Logic" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="1eafec94-86d4-4cb2-b170-08cb219540ef" name="MessageOccurrenceSpecification12">
-            <elementDefinition Id="4089ec3b-cf0d-426f-8f0d-ad1fe0db37a6" />
-            <covered>
-              <lifelineMoniker Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" LastKnownName="Problem Ambasador" />
             </covered>
           </messageOccurrenceSpecification>
           <behaviorExecutionSpecification Id="d9bfe7ab-d9a9-4785-8dba-5fcb1676431c" name="BehaviorExecutionSpecification5">
@@ -211,7 +149,7 @@ too high</body>
           <messageOccurrenceSpecification Id="9b53a10b-a993-46d1-a6b9-88e88ec6f52a" name="MessageOccurrenceSpecification15">
             <elementDefinition Id="cd14195b-6ef7-4b01-ad9d-75441c46d9c7" />
             <covered>
-              <lifelineMoniker Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" LastKnownName="Problem Ambasador" />
+              <lifelineMoniker Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" LastKnownName="Problem Driver" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="74a12f00-b3bd-40d5-b7f6-f435ff9803aa" name="MessageOccurrenceSpecification16">
@@ -229,7 +167,7 @@ too high</body>
           <messageOccurrenceSpecification Id="926ab6b3-87ed-4e12-9ec6-76d03daea8a8" name="MessageOccurrenceSpecification18">
             <elementDefinition Id="bb2c43d4-de20-4657-aa42-a1cde50c543c" />
             <covered>
-              <lifelineMoniker Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" LastKnownName="Problem Ambasador" />
+              <lifelineMoniker Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" LastKnownName="Problem Driver" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="3576fd0c-8a79-465d-8a52-cdd35f397a5d" name="ExecutionOccurrenceSpecification10">
@@ -243,16 +181,16 @@ too high</body>
               <lifelineMoniker Id="df08ab6d-7241-4aeb-afc6-9a1bd4a432fc" LastKnownName="Problem Delegate" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="01df5442-1a60-4699-a197-f8a0ce09ae43" name="MessageOccurrenceSpecification13">
-            <elementDefinition Id="231f29a7-7844-4fa2-8a7a-6ee11a3745ad" />
-            <covered>
-              <lifelineMoniker Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" LastKnownName="Problem Ambasador" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="d028d1fb-efbd-4426-b31d-9fa87e794df5" name="MessageOccurrenceSpecification14">
             <elementDefinition Id="a2d4b8ae-d49d-422b-b4fb-fc7a81aa6a7a" />
             <covered>
               <lifelineMoniker Id="c8cda517-b7a7-4c1b-9c58-e2a22a07c186" LastKnownName="Application Logic" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="01df5442-1a60-4699-a197-f8a0ce09ae43" name="MessageOccurrenceSpecification13">
+            <elementDefinition Id="231f29a7-7844-4fa2-8a7a-6ee11a3745ad" />
+            <covered>
+              <lifelineMoniker Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" LastKnownName="Problem Driver" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="939a68a3-e0d1-4051-8b8d-9cc30ff170e9" name="ExecutionOccurrenceSpecification8">
@@ -263,7 +201,7 @@ too high</body>
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" LastKnownName="Problem Ambasador" />
+              <lifelineMoniker Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" LastKnownName="Problem Driver" />
             </covered>
           </executionOccurrenceSpecification>
         </fragments>
@@ -273,8 +211,6 @@ too high</body>
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker Id="b2923985-78fa-4809-89b5-6bcf5d7f18d2" LastKnownName="MessageOccurrenceSpecification1" />
               <messageOccurrenceSpecificationMoniker Id="21a17eb8-75cb-4f22-8804-1e1ae176649a" LastKnownName="MessageOccurrenceSpecification4" />
-              <messageOccurrenceSpecificationMoniker Id="913625ef-37df-472b-bda2-ffac0de0d8e4" LastKnownName="MessageOccurrenceSpecification5" />
-              <messageOccurrenceSpecificationMoniker Id="a0cb65ec-ea46-4c16-95a0-f793e271560f" LastKnownName="MessageOccurrenceSpecification8" />
               <messageOccurrenceSpecificationMoniker Id="fd96e3c6-9088-4c64-9ff9-dce7f79d5b79" LastKnownName="MessageOccurrenceSpecification11" />
               <messageOccurrenceSpecificationMoniker Id="d028d1fb-efbd-4426-b31d-9fa87e794df5" LastKnownName="MessageOccurrenceSpecification14" />
             </topLevelOccurrences>
@@ -286,14 +222,7 @@ too high</body>
               <executionOccurrenceSpecificationMoniker Id="4a8c0b4b-e16a-40a4-afbb-54c5a0b05269" LastKnownName="ExecutionOccurrenceSpecification2" />
             </topLevelOccurrences>
           </lifeline>
-          <lifeline Id="c024420b-8151-4f2e-aabc-dee52cd8a59b" name="Problem Dictionary" isActor="false" lifelineDisplayName="Problem Dictionary">
-            <elementDefinition Id="2c836b36-9e3e-4d4e-aa6a-f69d727bb814" />
-            <topLevelOccurrences>
-              <executionOccurrenceSpecificationMoniker Id="06a073ae-3789-4608-8372-677817a765ad" LastKnownName="ExecutionOccurrenceSpecification3" />
-              <executionOccurrenceSpecificationMoniker Id="d2d3144c-2ed3-4f0a-b422-95d2e05cc0f7" LastKnownName="ExecutionOccurrenceSpecification4" />
-            </topLevelOccurrences>
-          </lifeline>
-          <lifeline Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" name="Problem Ambasador" isActor="false" lifelineDisplayName="Problem Ambasador">
+          <lifeline Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" name="Problem Driver" isActor="false" lifelineDisplayName="Problem Driver">
             <elementDefinition Id="d1d0e3dc-97c9-4ad3-9754-fffbd2a01293" />
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker Id="4d94ffd7-dcde-435d-b8ff-b9b3999e9536" LastKnownName="ExecutionOccurrenceSpecification7" />
@@ -325,24 +254,6 @@ too high</body>
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker Id="21a17eb8-75cb-4f22-8804-1e1ae176649a" LastKnownName="MessageOccurrenceSpecification4" />
-            </receiveEvent>
-          </message>
-          <message Id="4ecfda8c-c1a3-4df6-b3ef-214560d5103c" name="getProblemDefinition()" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
-            <elementDefinition Id="a56c99a7-00d6-4034-a2f3-68dae6366f2b" />
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker Id="913625ef-37df-472b-bda2-ffac0de0d8e4" LastKnownName="MessageOccurrenceSpecification5" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker Id="5303720c-136b-45be-8801-57f7c4f8f4e4" LastKnownName="MessageOccurrenceSpecification6" />
-            </receiveEvent>
-          </message>
-          <message Id="6054afeb-3392-4c4c-9730-14ed53597715" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
-            <elementDefinition Id="6eba4436-fba2-41af-9d71-a7c49b05b1c2" />
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker Id="fba28ef1-5981-4479-8ddf-b4f60f49a0f7" LastKnownName="MessageOccurrenceSpecification7" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker Id="a0cb65ec-ea46-4c16-95a0-f793e271560f" LastKnownName="MessageOccurrenceSpecification8" />
             </receiveEvent>
           </message>
           <message Id="a9ebbb6a-3dcd-493c-8680-e003fec04c42" name="delegateProblem()" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
@@ -392,16 +303,6 @@ too high</body>
     <packageHasNamedElement>
       <executionEvent Id="1ef2b7e5-27ec-488a-805f-d23bd99baa00" name="ExecutionEvent">
         <elementDefinition Id="00ea4cfd-5259-4ae4-a4fe-c9b1cc54cb8d" />
-      </executionEvent>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent Id="897acc28-237c-41f3-be56-32f4b13fe3d2" name="ExecutionEvent">
-        <elementDefinition Id="a7204de0-faa3-447f-ac39-c67519d58b15" />
-      </executionEvent>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent Id="ffbc697d-629d-40dc-801a-be4a029860d2" name="ExecutionEvent">
-        <elementDefinition Id="82a248d5-39fa-4054-b619-1e2f5f90d9ff" />
       </executionEvent>
     </packageHasNamedElement>
     <packageHasNamedElement>

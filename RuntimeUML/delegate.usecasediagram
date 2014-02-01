@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="45286f5c-a11d-4e7b-bf6f-a953fe7fd23a" name="delegate" linkedPackageId="4a61eaac-72c6-4642-94f9-cc10c223f43a" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="0faf9dee-8e98-47ac-9357-f8e2922f938a">
-      <profileInstance Id="7f32b1fa-163a-4325-93ff-c9a3b5f32ade" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="1df76263-08ae-48db-8b3a-5d513d1af3cf">
-      <profileInstance Id="a9123bdb-4c78-4014-96b6-59206f57c16d" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="45286f5c-a11d-4e7b-bf6f-a953fe7fd23a" name="delegate" linkedPackageId="4a61eaac-72c6-4642-94f9-cc10c223f43a" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="42ae8db7-2a94-4f1c-aa86-2751d3813b6e" name="Problem delegator" isAbstract="false" isLeaf="false">
@@ -89,7 +75,7 @@
         <elementDefinition Id="c7286902-6d1d-4273-8514-c4cc76d66f65" />
         <targetEnds>
           <association Id="20ef3521-e6aa-4fbc-8f2d-8011c0c984a3" isDerived="false" sourceEndRoleName="Problem delegator" targetEndRoleName="Solve problem" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="9b116b07-6e2a-4a15-a233-0bcbb7efbf58" LastKnownName="Solve problem" />
+            <useCaseMoniker Id="9b116b07-6e2a-4a15-a233-0bcbb7efbf58" LastKnownName="Delegate&#xD;&#xA;Problem" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="8d5e9da9-24d7-4ff3-81fa-e83b392d6058" name="Problem delegator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -108,7 +94,7 @@
       </actor>
     </useCaseModelRootHasTypes>
     <packageHasNamedElement>
-      <useCase Id="9b116b07-6e2a-4a15-a233-0bcbb7efbf58" name="Solve problem" isAbstract="false" isLeaf="false">
+      <useCase Id="9b116b07-6e2a-4a15-a233-0bcbb7efbf58" name="Delegate&#xD;&#xA;Problem" isAbstract="false" isLeaf="false">
         <elementDefinition Id="d9bdcb9d-7051-4141-b510-e3ac6fca49c1" />
         <extendedCases>
           <extend Id="b6e01116-ae25-44a9-a541-73e48f93cb9d">
@@ -126,7 +112,7 @@
         <elementDefinition Id="22838f3c-c587-4c1b-86ec-0aa7a0292f7c" />
         <additions>
           <include Id="fd490389-1e5c-4a90-9d03-f2579d1e8d00">
-            <useCaseMoniker Id="9b116b07-6e2a-4a15-a233-0bcbb7efbf58" LastKnownName="Solve problem" />
+            <useCaseMoniker Id="9b116b07-6e2a-4a15-a233-0bcbb7efbf58" LastKnownName="Delegate&#xD;&#xA;Problem" />
             <elementDefinition Id="10492cab-140a-4a96-9559-1af8625e09a0" />
           </include>
         </additions>
@@ -148,7 +134,7 @@
         <elementDefinition Id="80ac024f-b6d8-466c-ba5a-4319a177869a" />
         <additions>
           <include Id="65c3d53d-7919-4a8a-b7d1-6a0c31779fe3">
-            <useCaseMoniker Id="9b116b07-6e2a-4a15-a233-0bcbb7efbf58" LastKnownName="Solve problem" />
+            <useCaseMoniker Id="9b116b07-6e2a-4a15-a233-0bcbb7efbf58" LastKnownName="Delegate&#xD;&#xA;Problem" />
             <elementDefinition Id="2680ca55-0b26-4cd8-83ce-17f02b041ade" />
           </include>
         </additions>
@@ -162,7 +148,7 @@
         <elementDefinition Id="e265de50-e5d8-4071-bb3b-b396b02ba3c9" />
         <additions>
           <include Id="36d959fe-9137-461d-9b43-2445da62f64e">
-            <useCaseMoniker Id="9b116b07-6e2a-4a15-a233-0bcbb7efbf58" LastKnownName="Solve problem" />
+            <useCaseMoniker Id="9b116b07-6e2a-4a15-a233-0bcbb7efbf58" LastKnownName="Delegate&#xD;&#xA;Problem" />
             <elementDefinition Id="d055f6e2-320d-42ee-bbd9-0cad89ee3231" />
           </include>
         </additions>
@@ -188,5 +174,19 @@
   </packagedElements>
   <package Id="4a61eaac-72c6-4642-94f9-cc10c223f43a" name="RuntimeUML">
     <elementDefinition Id="58523316-dad1-4ff4-91c0-3fd7ca162ff1" />
+    <profileInstances>
+      <packageHasProfileInstances Id="0faf9dee-8e98-47ac-9357-f8e2922f938a">
+        <profileInstance Id="7f32b1fa-163a-4325-93ff-c9a3b5f32ade" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="1df76263-08ae-48db-8b3a-5d513d1af3cf">
+        <profileInstance Id="a9123bdb-4c78-4014-96b6-59206f57c16d" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>
