@@ -33,7 +33,7 @@ namespace RuntimeIt1.Controllers
             }
 
             ResponseBody.AppendChild(FunctionRoot);
-            ServiceLogger.LOG("First Entry");
+            //ServiceLogger.LOG("First Entry");
             return BuildResponse(ResponseBody);
         }
 

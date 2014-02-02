@@ -93,6 +93,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Design\XML\Functions.xml" />
+    <Content Include="Design\XML\Parameters.xml" />
     <Content Include="Global.asax" />
     <Content Include="App_Data\RuntimeSchema.xml" />
     <Content Include="Web.config" />
@@ -116,7 +118,7 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <Content Include="UML Class\Configuration.cd" />
+    <Content Include="Design\Configuration.cd" />
     <None Include="Properties\PublishProfiles\runtime - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\runtime - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">

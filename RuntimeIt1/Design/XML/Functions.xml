@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Functions>
+  <Function Name="Plus"/>
+  <Function Name="Minus"/>
+  <Function Name="Times"/>
+  <Function Name="Divide"/>
+  <Function Name="Modulus"/>
+  <Function Name="Power"/>
+  <Function Name="SquareRoot"/>
+  <Function Name="Replace"/>
+  <Function Name="Concat"/>
+</Functions>
