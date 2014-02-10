@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Problem-definition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="problem%20definition.xsd" Name="Add">
+  <Function name="Times">
+    <Vriable/>
+    <Variable>
+      <Function parentheses="True" name="Add">
+        <Varuable/>
+        <Varuable/>
+      </Function>
+    </Variable>
+  </Function>
+</Problem-definition>

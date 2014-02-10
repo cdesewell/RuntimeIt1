@@ -7,6 +7,9 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
+using System.Threading.Tasks;
+using RuntimeIt1.Logging;
+using RuntimeIt1.Controllers;
 
 namespace RuntimeIt1
 {
@@ -17,7 +20,14 @@ namespace RuntimeIt1
             // Code that runs on application startup
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);            
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            HttpContext.Current.Application["ProblemDictionary"] = new ProblemDictinary();
+        }
+        protected void Application_BeginRequest(object sender, EventArgs e)
+        {
+            var Context = sender as HttpApplication;
+            new Task(() => ServiceLogger.LOG(Context.Request.UserHostAddress, Context.Request.HttpMethod, 
+                Context.Request.Url.ToString())).Start();
         }
     }
 }

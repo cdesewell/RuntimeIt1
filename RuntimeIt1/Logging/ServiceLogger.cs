@@ -4,27 +4,25 @@ using System.IO;
 using System.Linq;
 using System.Web;
 
+using System.Data;
+
+using MySql.Data;
+using MySql.Data.MySqlClient;
+
 namespace RuntimeIt1.Logging
 {
     public static class ServiceLogger
     {
-
-        public static void LOG(string Entry)
+        public static void LOG(string Host, string Method, string URL)
         {
-            StreamWriter FileWriter;
-            string FileName = "./LOGS/" + DateTime.Now.ToString("MM-dd-yyyy") + ".txt";
-            if (File.Exists(FileName))
-            {
-                FileWriter = File.AppendText(FileName);
-                FileWriter.WriteLine(Entry);
-                FileWriter.Close();
-            }
-            else
-            {
-                FileWriter = new StreamWriter(FileName);
-                FileWriter.WriteLine(Entry);
-                FileWriter.Close();
-            }
+            MySqlConnection LogConnection = new MySqlConnection("server=mysql.chrissewell.co.uk;" +
+            "user=root;database=runtime;port=3306;password=Lambda01;");
+            LogConnection.Open();
+            string LogQuery = "INSERT INTO logs (Host,Method,URL) VALUES ('" + Host + "','"+ Method +"','"+ URL +"')";
+            MySqlCommand LogCommand = new MySqlCommand(LogQuery, LogConnection);
+            LogCommand.ExecuteNonQuery();
+            LogConnection.Close();
         }
+
     }
 }

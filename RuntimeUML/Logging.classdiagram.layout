@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Logging">
+  <logicalClassDesignerModelMoniker Id="dedd9289-7ff3-4ff0-9967-103c84e77651" />
+  <nestedChildShapes>
+    <classShape Id="bbb59a2b-8ba6-4434-a4bf-0a8e9a7f7de9" absoluteBounds="3.875, 1.375, 3.625, 1.5281481095155081" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+      <classMoniker Id="295e6f81-e8a1-4c8a-ab5a-9eb5a4c4bf9a" LastKnownName="Global" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="92320177-0fc9-4724-a78a-f2b4fcca171c" absoluteBounds="3.8899999999999997, 1.8903356393178306, 3.5949999999999998, 0.22117186754941942" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="a75fa9e7-ed19-4c3d-888b-c26ca69bd928" absoluteBounds="3.8899999999999997, 2.1215075068672498, 3.5949999999999998, 0.6816406026482581" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4abb1181-c446-4cef-801d-e849e2afa3ea" absoluteBounds="0.5, 1.375, 3.25, 1.1878356194496154" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+      <classMoniker Id="9f453f21-5d5e-4566-ba35-32e8b01912d9" LastKnownName="ServiceLogger" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="07fca6ce-f548-4693-ad6e-f5abedf925eb" absoluteBounds="0.515, 1.8903356393178306, 3.2199999999999998, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="b8303045-be93-4c27-869e-f4b4fbc8a5dd" absoluteBounds="0.515, 2.1015075068672497, 3.2199999999999998, 0.36132811258236563" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

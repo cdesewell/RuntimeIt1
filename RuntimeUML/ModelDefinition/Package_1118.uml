@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="38114a56-ef4b-4759-901b-bf44db32c925"
+  name="RuntimeIt1"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="9b63b6cb-ca61-4fce-b35f-9ebdc8599197"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DRuntimeIt1"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3ca545a3-5185-409f-a860-120da75cde16"
+        LastKnownName="Configuration"
+        LastKnownLocation="Package1_1118.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="1c4c2e7c-25c5-42d1-bed0-290f2e62fdbb"
+        LastKnownName="Controllers"
+        LastKnownLocation="Package_1119.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="f08a91db-d7c0-4576-9735-8cf17644c7c7"
+        LastKnownName="Logging"
+        LastKnownLocation="Package_1121.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="54d4499b-717c-4ace-82dc-09686d2ba1dd"
+        name="Global"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="83fede6e-859f-46f8-8fcf-55647f6ecc17"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1 Type%3DGlobal"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a6ed51eb-b53a-4a5d-875e-75d64bbab6ed"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6511a6ae-0d37-4908-957f-3cbd3edd4438">
+                <propertyInstance
+                  Id="08470ec2-c8c8-41fd-9251-4cf040f9eb33"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="715c690f-89bf-46c4-9e71-2b7f0a1e5ab7">
+                <propertyInstance
+                  Id="f844d0e8-8eeb-4f83-b9fd-97d1394dedf1"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0d265d6e-a655-43f2-9fb2-eed28ccc4e47">
+                <propertyInstance
+                  Id="0e931418-9e5e-4210-8038-266613f8636c"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ab5406ae-dda6-4588-95b2-d4f809ede8c8">
+                <propertyInstance
+                  Id="ebfc31c4-7471-4570-a5ef-e2310aa4d25e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c3fc893a-8902-47f6-8c0f-146364cd7cc0">
+                <propertyInstance
+                  Id="d0ca1ff0-499e-4e04-9fcf-f05fd32206b1"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="d330bc5f-0273-4ce5-8d9f-0cd662e87d96"
+            isSubstitutable="false">
+            <classMoniker
+              Id="c0576a2f-5ae4-4d23-bb8f-76a166b7a23c"
+              LastKnownName="HttpApplication"
+              LastKnownLocation="Package1_1121.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="81eece5d-c616-41f8-9670-2d6bd38182d4"
+            name="Application_BeginRequest"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f50eba60-b583-41b0-9ac1-397c5800c849"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1 Type%3DGlobal Member%3D(Name%3DApplication_BeginRequest OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DEventArgs)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f70b5993-f2ea-4eb5-980b-e625748b78be"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4f7b0c4-8e11-47a5-bddf-d6bb75e7cdc5">
+                    <propertyInstance
+                      Id="3dd8d712-e7fc-4752-b865-676f403e79f1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b4ab0757-2663-4902-b635-64006b7a967a">
+                    <propertyInstance
+                      Id="4925b16c-3eaf-4774-9cba-e7ec61e0cc70"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a54e1efc-79f2-4006-add1-59f727d8a595">
+                    <propertyInstance
+                      Id="edf135a4-04c9-40ff-8c80-1efd11c237ad"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="709fbe0a-e21e-47e5-97e8-9f048ddae69d">
+                    <propertyInstance
+                      Id="a9b6edfd-d9bf-4aae-8e56-237808e5fe48"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff3f6f56-b67c-4965-b4b2-e93e219b953a">
+                    <propertyInstance
+                      Id="a0a39cdd-5168-47f0-be54-f88842063bc3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c92677a6-71c7-4d74-b83f-8fdfc0763bdb">
+                    <propertyInstance
+                      Id="674a8186-5b1b-48ee-8087-d74fe6918df6"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d1a4e9fe-e752-47d9-9736-dfbf99562ad6"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f1769f10-0f0f-40ba-96f7-f348368c5e30"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1 Type%3DGlobal Member%3D(Name%3DApplication_BeginRequest OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DEventArgs)]) ParameterIdentifier%3Dsender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ca935c36-60b2-484e-aeb8-330f942a463b"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1118.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="de4734a4-40f5-4efc-b065-dc2ce89109ff"
+                  name="e"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b980d48b-15ad-4dcc-86f3-480262872411"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1 Type%3DGlobal Member%3D(Name%3DApplication_BeginRequest OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DEventArgs)]) ParameterIdentifier%3De"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="f64a9719-db7d-4894-8d84-383518523849"
+                      LastKnownName="EventArgs"
+                      LastKnownLocation="Package2_1118.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f1dc8a83-3b76-4192-9e53-c3bf731e6bfb"
+            name="Application_Start"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ff1edf3d-ae5b-4f74-a682-5f7803f9f0a7"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1 Type%3DGlobal Member%3D(Name%3DApplication_Start OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DEventArgs)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c08b4672-fc41-44f5-b2a4-62a69a7a42ef"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fe877c19-b7b4-4ffa-a167-a57f9a83cdaa">
+                    <propertyInstance
+                      Id="68067ae3-2a9c-4521-9b73-8763adfdfbb4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6857e0e8-2b01-4b85-bc61-e5a301d62f05">
+                    <propertyInstance
+                      Id="002bb598-c2da-41be-aa5d-19102992576e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="772948ed-4f92-4585-b442-f24170427733">
+                    <propertyInstance
+                      Id="837e4911-0098-4d23-a759-101cf3f20f08"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5943a547-1928-4ad9-9885-a907324de053">
+                    <propertyInstance
+                      Id="2b5fac76-3ec0-489f-ba93-92573f0d9ba0"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="18e17d74-7677-4bff-9ac5-615053b2ef63">
+                    <propertyInstance
+                      Id="b8feccd5-8772-4756-b90e-69f8a8527b9d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c152a08-abc8-406d-8c40-ca86cdf94dda">
+                    <propertyInstance
+                      Id="3f09d99f-8d20-4515-b158-5eb88c7b9367"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b62abc46-b953-4cf9-8d92-09bfbfc9b9ab"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c45dae97-db9e-4d3a-9aa9-cc03d320e5f3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1 Type%3DGlobal Member%3D(Name%3DApplication_Start OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DEventArgs)]) ParameterIdentifier%3Dsender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ca935c36-60b2-484e-aeb8-330f942a463b"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1118.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="057e6737-4b67-4d57-8a61-d5d21e2a2b71"
+                  name="e"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7c9fcda2-e8c5-4088-98c3-c5ea34922e96"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1 Type%3DGlobal Member%3D(Name%3DApplication_Start OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DEventArgs)]) ParameterIdentifier%3De"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="f64a9719-db7d-4894-8d84-383518523849"
+                      LastKnownName="EventArgs"
+                      LastKnownLocation="Package2_1118.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d1436856-b5d9-48a3-aebb-49a34168c2f8"
+            name="Global"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ff1d5110-4423-4bad-899d-37ff4a49e3c0"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1 Type%3DGlobal Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1902bcae-8f20-4008-9744-b97c35a32b61"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b21991f0-a74e-47c3-9151-75f7b3f209fa">
+                    <propertyInstance
+                      Id="99debb5e-a310-4cfc-98bf-180d6233d8b5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40c61159-f52a-49b2-aa08-dded7756f84f">
+                    <propertyInstance
+                      Id="262b94de-3f4a-48cf-8441-40471327e828"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8fcaf346-6214-4969-b900-c1f781b40339">
+                    <propertyInstance
+                      Id="4d6069d9-ef6d-4c5e-b74f-f0781c11fba4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0afaa448-360a-4a43-beb9-5447e6dc3ccc">
+                    <propertyInstance
+                      Id="cd681bc9-4782-4cfa-ac17-4f2552cc4056"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="29abf100-7d18-4fde-8fed-d5ced5130797">
+                    <propertyInstance
+                      Id="cbf67a19-abc3-4233-812e-e235ebeeee00"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="913e8080-1649-40e7-aa5c-850bc34c2710">
+                    <propertyInstance
+                      Id="e83f603a-10a8-43e8-add5-0ed9b7431105"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

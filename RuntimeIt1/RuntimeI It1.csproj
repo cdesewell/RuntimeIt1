@@ -42,6 +42,18 @@
       <HintPath>..\..\..\Visual Studio 2013\Jurassic\Jurassic.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="mysql.data">
+      <HintPath>..\..\..\Visual Studio 2013\MySQL\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.data.entity.EF5">
+      <HintPath>..\..\..\Visual Studio 2013\MySQL\mysql.data.entity.EF5.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.data.entity.EF6">
+      <HintPath>..\..\..\Visual Studio 2013\MySQL\mysql.data.entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.web">
+      <HintPath>..\..\..\Visual Studio 2013\MySQL\mysql.web.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -93,12 +105,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Design\XML\Functions.xml" />
-    <Content Include="Design\XML\Parameters.xml" />
-    <Content Include="Design\XML\Return.xml" />
     <Content Include="Global.asax" />
     <Content Include="App_Data\RuntimeSchema.xml" />
-    <Content Include="Web.config" />
+    <Content Include="problem.xml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -112,14 +124,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\ProblemDictinary.cs" />
+    <Compile Include="Models\ProblemDictinary.cs" />
     <Compile Include="Logging\ServiceLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <Content Include="Design\UML\Configuration.cd" />
+    <Content Include="Schemas\Functions.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schemas\Parameters.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schemas\Return.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Properties\PublishProfiles\runtime - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\runtime - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
@@ -129,9 +152,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

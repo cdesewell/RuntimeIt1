@@ -22,9 +22,25 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="XML\Functions.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="XML\Parameters.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="XML\Return.xml">
+      <SubType>Content</SubType>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="Configuration.cd">
       <SubType>Content</SubType>
+    </Content>
+    <Content Include="Configuration.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Configuration.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Configuration.classdiagram</DependentUpon>
     </Content>
     <Content Include="delegate.sequencediagram">
       <SubType>Content</SubType>
@@ -54,8 +70,43 @@
       <SubType>Content</SubType>
       <DependentUpon>delegator.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="Logging.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Logging.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Logging.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1118.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1121.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1118.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1118.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package4_1118.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package5_1118.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1118.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1119.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1121.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\RuntimeUML.uml">
       <SubType>Content</SubType>
     </Content>
+    <Folder Include="XML\" />
   </ItemGroup>
 </Project>
