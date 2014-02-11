@@ -7,8 +7,7 @@ namespace RuntimeIt1.Controllers
 {
     public class Runtime
     {
-        ScriptEngine runtime;
-
+        private ScriptEngine runtime;
         public Runtime()
         {
             runtime = new Jurassic.ScriptEngine();

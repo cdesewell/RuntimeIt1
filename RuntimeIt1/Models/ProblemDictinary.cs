@@ -14,11 +14,9 @@ namespace RuntimeIt1.Controllers
     public class ProblemDictinary
     {
         public Dictionary<string, string> ProblemDirectory;
-        public OperandConfigurationSection CoreOperands;
-        public ProblemDictinary()
+        public ProblemDictinary(OperandConfigurationSection CoreOperands)
         {
             ProblemDirectory = new Dictionary<string, string>();
-            CoreOperands = ConfigurationManager.GetSection("RuntimeCoreOperands") as OperandConfigurationSection;
 
             foreach (OperandConfigurationElement Operand in CoreOperands.Operands)
             {
@@ -54,8 +52,16 @@ namespace RuntimeIt1.Controllers
             return Functions;
         }
 
-        
-
-
+        public void DeleteFunction(string ProblemKey)
+        {
+            foreach (KeyValuePair<string, string> Pair in ProblemDirectory)
+            {
+                if(Pair.Key == ProblemKey)
+                {
+                    this.ProblemDirectory.Remove(Pair.Key);
+                    return;
+                }
+            }
+        }
     }
 }

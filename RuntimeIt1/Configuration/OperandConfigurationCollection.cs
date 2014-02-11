@@ -32,13 +32,5 @@ namespace RuntimeIt1.Configuration
         {
             return ((OperandConfigurationElement)element).Name;
         }
-
-        public new IEnumerator<OperandConfigurationElement> GetEnumerator()
-        {
-            for(var elementCount = 0; elementCount < this.Count; elementCount++)
-            {
-                yield return this.BaseGet(elementCount) as OperandConfigurationElement;
-            }
-        }
     }
 }

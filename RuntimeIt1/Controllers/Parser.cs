@@ -9,10 +9,12 @@ namespace RuntimeIt1.Controllers
 {
     public class Parser
     {
-
-        public Parser()
+        private Regex RegexVar;
+        private Regex RegexString;
+        public Parser(string VariableId, string StringId)
         {
-
+            RegexVar = new Regex(VariableId);
+            RegexString = new Regex(StringId);
         }
         public string Parse(string Problem, string Variables)
         {
@@ -20,41 +22,37 @@ namespace RuntimeIt1.Controllers
 
             foreach (string Variable in VariablesArray)
             {
-                Regex Regex = new Regex("var");
-                Problem = Regex.Replace(Problem, Variable, 1);
+                Problem = RegexVar.Replace(Problem, Variable, 1);
             }
             return Problem;
         }
 
         public string ParseNo(string Problem, string Variable, int No)
         {
-            Regex Regex = new Regex("var");
-            MatchCollection Matches = Regex.Matches(Problem);
+
+            MatchCollection Matches = RegexVar.Matches(Problem);
             int VarialeIndex = Matches[No].Index;
             string Solution = Problem.Substring(0, VarialeIndex) + Variable;
-            if (VarialeIndex + 3 != Problem.Length)
-            {
-                Solution += Problem.Substring(VarialeIndex + 3, Problem.Length);
-            }
+            Solution += Problem.Substring(VarialeIndex + 3, Problem.Length - (VarialeIndex + 3));
             return Solution;
         }
 
         public int GetParameterNo(string Solution)
         {
             MatchCollection Vars;
-            Regex Regex = new Regex("var");
-            Vars = Regex.Matches(Solution);
+
+            Vars = RegexVar.Matches(Solution);
             return Vars.Count;
         }
 
         public string Stringify(string BaseSolution, string Solution)
         {
-            Regex Regex = new Regex("'");
-            if (Regex.IsMatch(Solution))
+
+            if (RegexString.IsMatch(Solution))
             {
-                while (Regex.IsMatch(Solution))
+                while (RegexString.IsMatch(Solution))
                 {
-                    Solution = Regex.Replace(Solution, "", 1);
+                    Solution = RegexString.Replace(Solution, "", 1);
                 }
                 Solution = Solution.Replace(BaseSolution, "'" + BaseSolution + "'");
             }
@@ -65,10 +63,6 @@ namespace RuntimeIt1.Controllers
             string Solution = Variables.Replace("i", Iterator.ToString());
             return Solution;
         }
-
-
-
-
 
     }
 }

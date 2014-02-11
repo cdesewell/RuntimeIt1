@@ -10,6 +10,8 @@ using System.Web.Http;
 using System.Threading.Tasks;
 using RuntimeIt1.Logging;
 using RuntimeIt1.Controllers;
+using System.Configuration;
+using RuntimeIt1.Configuration;
 
 namespace RuntimeIt1
 {
@@ -21,7 +23,10 @@ namespace RuntimeIt1
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            HttpContext.Current.Application["ProblemDictionary"] = new ProblemDictinary();
+
+            HttpContext.Current.Application["ProblemDictionary"] = new ProblemDictinary(ConfigurationManager.GetSection("RuntimeCoreOperands") as OperandConfigurationSection);
+            HttpContext.Current.Application["Parser"] = new Parser("var","'");
+            HttpContext.Current.Application["Runtime"] = new Runtime();
         }
         protected void Application_BeginRequest(object sender, EventArgs e)
         {

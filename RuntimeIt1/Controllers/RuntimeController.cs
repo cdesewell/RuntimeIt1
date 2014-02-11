@@ -17,17 +17,19 @@ namespace RuntimeIt1.Controllers
     public class RuntimeController : ApiController
     {
 
-        ProblemDictinary ProblemDictionary = HttpContext.Current.Application["ProblemDictionary"] as ProblemDictinary;
-        Parser Parser = new Parser();
-        Runtime JavaScriptEngine = new Runtime();
-        XmlDocument ResponseBody;
+        private ProblemDictinary ProblemDictionary =
+        HttpContext.Current.Application["ProblemDictionary"] as ProblemDictinary;
+        private Parser Parser =
+        HttpContext.Current.Application["Parser"] as Parser;
+        private Runtime JavaScriptEngine =
+        HttpContext.Current.Application["Runtime"] as Runtime;
+        private XmlDocument ResponseBody = new XmlDocument();
 
         [HttpGet]//GET api/runtime
         public HttpResponseMessage GetFunctions()
         {
             List<string> Functions = this.ProblemDictionary.GetFunctions();
 
-            ResponseBody = new XmlDocument();
             XmlElement RootElement = ResponseBody.CreateElement("Functions");
 
             foreach (string FunctionKey in Functions)
@@ -46,10 +48,9 @@ namespace RuntimeIt1.Controllers
         {
             string Solution = this.ProblemDictionary.GetProblem(Problem);
 
-            ResponseBody = new XmlDocument();
-            XmlElement rootElement = ResponseBody.CreateElement("Parameters");
-            rootElement.InnerText = Convert.ToString(this.Parser.GetParameterNo(Solution));
-            ResponseBody.AppendChild(rootElement);
+            XmlElement RootElement = ResponseBody.CreateElement("Parameters");
+            RootElement.InnerText = Convert.ToString(this.Parser.GetParameterNo(Solution));
+            ResponseBody.AppendChild(RootElement);
 
             return BuildResponse(ResponseBody, "http://runtime.azurewebsites.net/Schemas/Parameters.xsd");
         }
@@ -59,7 +60,6 @@ namespace RuntimeIt1.Controllers
         {
             string Solution = this.Parser.Parse(this.ProblemDictionary.GetProblem(Problem), Variables);
 
-            ResponseBody = new XmlDocument();
             XmlElement RootElement = ResponseBody.CreateElement("Return");
             RootElement.InnerText = this.JavaScriptEngine.Execute(Solution).ToString();
             ResponseBody.AppendChild(RootElement);
@@ -70,56 +70,81 @@ namespace RuntimeIt1.Controllers
         [HttpGet]//GET runtime/loop/{start}/{finish}/{iterate}/{Function}/{Parameter} ...
         public HttpResponseMessage GerLoopedSolution(int Start, int Finish, int Iterate, string Accumulator, string Problem, string Variables)
         {
-            string BaseSolution = this.JavaScriptEngine.Execute(Parser.Parse(ProblemDictionary.GetProblem(Problem), Variables)).ToString();
-            string Solution = BaseSolution;
+            string Solution = this.JavaScriptEngine.Execute(
+                this.Parser.Parse(
+                this.ProblemDictionary.GetProblem(
+                Problem),
+                Variables)).ToString();
+
+            string SubSolution = Solution;
 
             for (int x = Start; x < Finish; x += Iterate)
             {
-                Solution += "/" + this.JavaScriptEngine.Execute(this.Parser.Parse(ProblemDictionary.GetProblem(Problem), Variables)).ToString();
-                Solution = this.Parser.Parse(this.ProblemDictionary.GetProblem(Accumulator), Solution);
+                SubSolution += "/" + this.JavaScriptEngine.Execute(
+                    this.Parser.Parse(
+                    this.ProblemDictionary.GetProblem(
+                    Problem),
+                    Variables)).ToString();
+
+                SubSolution = this.Parser.Parse(
+                    this.ProblemDictionary.GetProblem(
+                    Accumulator),
+                    SubSolution);
             }
 
-            Solution = this.Parser.Stringify(BaseSolution, Solution);
+            SubSolution = this.Parser.Stringify(Solution, SubSolution);
 
-            ResponseBody = new XmlDocument();
             XmlElement RootElement = ResponseBody.CreateElement("Return");
-            RootElement.InnerText = this.JavaScriptEngine.Execute(Solution).ToString();
+            RootElement.InnerText = this.JavaScriptEngine.Execute(SubSolution).ToString();
             ResponseBody.AppendChild(RootElement);
 
             return this.BuildResponse(ResponseBody, "http://runtime.azurewebsites.net/Schemas/Return.xsd");
         }
 
+        //POST /runtime/{FUnction}
         [HttpPost]
-        public void SetProblem(string Name)
+        public HttpResponseMessage SetProblem(string Name)
         {
-            StreamReader RequestBodyStream = new StreamReader(HttpContext.Current.Request.InputStream);
-            XmlDocument XmlDefinition = new XmlDocument(); // Create an XML document object
-            XmlDefinition.LoadXml(RequestBodyStream.ReadToEnd());
-            XmlNodeList Root = XmlDefinition.GetElementsByTagName("Problem-definition");
-            XmlNodeList Function = Root[0].ChildNodes;
+            XmlDocument XmlDefinition = new XmlDocument();
+            XmlDefinition.LoadXml(
+                new StreamReader(
+                    HttpContext.Current.Request.InputStream).ReadToEnd(
+                    ));
+
+            XmlNodeList Function = XmlDefinition.GetElementsByTagName(
+                "Problem-definition")[0].ChildNodes;
+
             string Solution = RecurseDefineProblem(Function, "");
             this.ProblemDictionary.SetProblem(Name, Solution);
 
+            return this.BuildResponse(XmlDefinition, "http://myschema.com");
         }
 
-        // PUT api/runtime/5
+        // PUT api/runtime/{Function}
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/runtime/5
-        public void Delete(int id)
+        // DELETE /runtime/{Function}
+        public HttpResponseMessage Delete(string Problem)
         {
+            XmlElement RootElement = ResponseBody.CreateElement("Removed");
+
+            this.ProblemDictionary.DeleteFunction(Problem);
+
+            RootElement.InnerText = Problem;
+            ResponseBody.AppendChild(RootElement);
+            return BuildResponse(ResponseBody, "http://myschema.com");
         }
 
 
         private string RecurseDefineProblem(XmlNodeList Function, string Solution)
         {
-            XmlAttributeCollection FunctionName = Function[0].Attributes;
-            string Name = FunctionName["name"].Value;
+            string Name = Function[0].Attributes["name"].Value;
             string SubSolution = this.ProblemDictionary.GetProblem(Name);
             XmlNodeList Variables = Function[0].ChildNodes;
-            int ParameterNo = Parser.GetParameterNo(SubSolution);
+            int ParameterNo = this.Parser.GetParameterNo(SubSolution);
+
             if (Variables.Count == ParameterNo)
             {
                 for (int Incerement = 0; Incerement < Variables.Count; Incerement++)
@@ -130,9 +155,9 @@ namespace RuntimeIt1.Controllers
                         {
                             Solution = SubSolution;
                         }
-                         return Parser.ParseNo(Solution, 
-                             RecurseDefineProblem(Variables[Incerement].ChildNodes, 
-                             Solution), 
+                        SubSolution = this.Parser.ParseNo(SubSolution,
+                             RecurseDefineProblem(Variables[Incerement].ChildNodes,
+                             Solution),
                              Incerement);
                     }
                 }
@@ -143,9 +168,13 @@ namespace RuntimeIt1.Controllers
         private HttpResponseMessage BuildResponse(XmlDocument ResponseBody, string SchemaName)
         {
             ResponseBody.DocumentElement.SetAttribute("xmlns", SchemaName);
-            return new HttpResponseMessage() { Content = new StringContent(ResponseBody.OuterXml, new UTF8Encoding(), "application/xml") };
+            return new HttpResponseMessage()
+            {
+                Content = new StringContent(
+                    ResponseBody.OuterXml,
+                    new UTF8Encoding(), "application/xml")
+            };
         }
-
 
         private void BuildError()
         {
