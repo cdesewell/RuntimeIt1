@@ -26,6 +26,7 @@ namespace RuntimeIt1
                 defaults: new { controller = "runtime", action = "GetParameters" }
                 );
 
+
             config.Routes.MapHttpRoute(
                 name: "LoopedProblemDelegation",
                 routeTemplate: "runtime/loop/{accumulator}/{start}/{finish}/{iterate}/{problem}/{*variables}",
@@ -39,12 +40,16 @@ namespace RuntimeIt1
                 );
 
             config.Routes.MapHttpRoute(
+                name: "DeleteProblem",
+                routeTemplate: "runtime/remove/{problem}",
+                defaults: new { controller = "runtime", action = "DeleteProblem" }
+            );
+
+            config.Routes.MapHttpRoute(
                 name: "ProblemDelegation",
                 routeTemplate: "runtime/{problem}/{*variables}",
                 defaults: new { controller = "runtime", action = "GetSolution" }
                 );
-
-
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
@@ -59,10 +64,17 @@ namespace RuntimeIt1
             );
 
             config.Routes.MapHttpRoute(
-            name: "Define",
-            routeTemplate: "{controller}/define/{id}",
-            defaults: new { id = RouteParameter.Optional }
-);
+                name: "Define",
+                routeTemplate: "{controller}/define/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
+
+            config.Routes.MapHttpRoute(
+                name: "Remove",
+                routeTemplate: "{controller}/remove/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
+
         }
     }
 }

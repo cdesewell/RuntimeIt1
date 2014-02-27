@@ -22,15 +22,6 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="XML\Functions.xml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="XML\Parameters.xml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="XML\Return.xml">
-      <SubType>Content</SubType>
-    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="Configuration.cd">
       <SubType>Content</SubType>
@@ -107,6 +98,5 @@
     <Content Include="ModelDefinition\RuntimeUML.uml">
       <SubType>Content</SubType>
     </Content>
-    <Folder Include="XML\" />
   </ItemGroup>
 </Project>

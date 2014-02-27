@@ -6,7 +6,7 @@ using System.Configuration;
 
 namespace RuntimeIt1.Configuration
 {
-    public class OperandConfigurationCollection : ConfigurationElementCollection, IEnumerable<OperandConfigurationElement>
+    public class OperandConfigurationCollection : ConfigurationElementCollection
     {
         public override ConfigurationElementCollectionType CollectionType
         {

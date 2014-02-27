@@ -107,10 +107,23 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="App_Data\RuntimeSchema.xml" />
-    <Content Include="problem.xml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Schemas\Problem.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\Remove.xml" />
+    <None Include="XML\Functions.xml" />
+    <None Include="XML\Parameters.xml" />
+    <None Include="XML\Problem.xml" />
+    <None Include="XML\ProblemDefinition.xml" />
+    <Content Include="Schemas\Remove.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="XML\Return.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -145,6 +158,10 @@
     </Content>
     <None Include="Properties\PublishProfiles\runtime - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\runtime - Web Deploy.pubxml" />
+    <Content Include="Schemas\ProblemDefinition.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http=//runtime.azurewebsites.net/Schemas/Problem.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Problem" type="xs:string" />
+</xs:schema>
