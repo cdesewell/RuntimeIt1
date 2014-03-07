@@ -7,6 +7,8 @@ using System.Configuration;
 using RuntimeIt1.Configuration;
 using System.Text.RegularExpressions;
 using System.Xml;
+using RuntimeIt1.Exceptions;
+using System.Net;
 
 namespace RuntimeIt1.Controllers
 {
@@ -26,19 +28,37 @@ namespace RuntimeIt1.Controllers
         }
         public void SetProblem(string ProblemKey, string ProblemValue)
         {
+            if (ProblemDirectory.ContainsKey(ProblemKey))
+            {
+                throw new ServiceException(HttpStatusCode.Forbidden, "Problem already defined");
+            }
             ProblemDirectory.Add(ProblemKey, ProblemValue);
+        }
+
+        public void UpdateProblem(string ProblemKey, string ProblemValue)
+        {
+
+            if (ProblemDirectory.ContainsKey(ProblemKey))
+            {
+                ProblemDirectory[ProblemKey] = ProblemValue;
+            }
+            else
+            {
+                throw new ServiceException(HttpStatusCode.NotFound, "Problem not found");
+            }
+
         }
 
         public string GetProblem(string ProblemKey)
         {
-            foreach (KeyValuePair<string, string> Pair in ProblemDirectory)
+            try
             {
-                if (Pair.Key == ProblemKey)
-                {
-                    return Pair.Value;
-                }
+                return ProblemDirectory[ProblemKey];
             }
-            return null;
+            catch (KeyNotFoundException)
+            {
+                throw new ServiceException(HttpStatusCode.NotFound, "Problem not found");
+            }
         }
 
         public List<string> GetFunctions()
@@ -52,16 +72,17 @@ namespace RuntimeIt1.Controllers
             return Functions;
         }
 
-        public void DeleteFunction(string ProblemKey)
+        public void DeleteProblem(string ProblemKey)
         {
-            foreach (KeyValuePair<string, string> Pair in ProblemDirectory)
+            try
             {
-                if(Pair.Key == ProblemKey)
-                {
-                    this.ProblemDirectory.Remove(Pair.Key);
-                    return;
-                }
+                ProblemDirectory.Remove(ProblemKey);
             }
+            catch (KeyNotFoundException)
+            {
+                throw new ServiceException(HttpStatusCode.NotFound, "Problem not found");
+            }
+
         }
     }
 }

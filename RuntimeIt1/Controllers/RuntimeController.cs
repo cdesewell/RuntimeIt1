@@ -11,6 +11,7 @@ using RuntimeIt1.Logging;
 using System.Xml.Schema;
 using System.IO;
 using System.Web.Http.Controllers;
+using RuntimeIt1.Exceptions;
 
 namespace RuntimeIt1.Controllers
 {
@@ -24,139 +25,198 @@ namespace RuntimeIt1.Controllers
         private Runtime JavaScriptEngine =
         HttpContext.Current.Application["Runtime"] as Runtime;
         private XmlDocument ResponseBody = new XmlDocument();
+        XmlElement RootElement;
 
         [HttpGet]//GET /api/runtime
         public HttpResponseMessage GetFunctions()
         {
-            List<string> Functions = this.ProblemDictionary.GetFunctions();
-
-            XmlElement RootElement = ResponseBody.CreateElement("Functions");
-
-            foreach (string FunctionKey in Functions)
+            try
             {
-                XmlElement FunctionElement = ResponseBody.CreateElement("Function");
-                FunctionElement.SetAttribute("Name", FunctionKey);
-                RootElement.AppendChild(FunctionElement);
-            }
+                List<string> Functions = this.ProblemDictionary.GetFunctions();
 
-            ResponseBody.AppendChild(RootElement);
-            return BuildResponse(ResponseBody, "http://runtime.azurewebsites.net/Schemas/Functions.xsd");
+                RootElement = ResponseBody.CreateElement("Functions");
+
+                foreach (string FunctionKey in Functions)
+                {
+                    XmlElement FunctionElement = ResponseBody.CreateElement("Function");
+                    FunctionElement.SetAttribute("Name", FunctionKey);
+                    RootElement.AppendChild(FunctionElement);
+                }
+
+                ResponseBody.AppendChild(RootElement);
+                return BuildResponse(ResponseBody, "http://runtime.azurewebsites.net/Schemas/Functions.xsd");
+            }
+            catch (ServiceException ServiceException)
+            {
+                return this.BuildError(ServiceException.HTTPCode, ServiceException.HTTPMessage);
+            }
         }
 
         [HttpGet]//GET /api/runtime/{Function}
         public HttpResponseMessage GetParameters(string Problem)
         {
-            string Solution = this.ProblemDictionary.GetProblem(Problem);
+            try
+            {
+                string Solution = this.ProblemDictionary.GetProblem(Problem);
 
-            XmlElement RootElement = ResponseBody.CreateElement("Parameters");
-            RootElement.InnerText = Convert.ToString(this.Parser.GetParameterNo(Solution));
-            ResponseBody.AppendChild(RootElement);
+                RootElement = ResponseBody.CreateElement("Parameters");
+                RootElement.InnerText = Convert.ToString(this.Parser.GetParameterNo(Solution));
+                ResponseBody.AppendChild(RootElement);
 
-            return BuildResponse(ResponseBody, "http://runtime.azurewebsites.net/Schemas/Parameters.xsd");
+                return BuildResponse(ResponseBody, "http://runtime.azurewebsites.net/Schemas/Parameters.xsd");
+            }
+            catch (ServiceException ServiceException)
+            {
+                return this.BuildError(ServiceException.HTTPCode, ServiceException.HTTPMessage);
+            }
         }
 
         [HttpGet]//GET /runtime/{Function}/{Parameter} ...
         public HttpResponseMessage GetSolution(string Problem, string Variables)
         {
-            string Solution = this.Parser.Parse(this.ProblemDictionary.GetProblem(Problem), Variables);
+            try
+            {
+                string Solution = this.Parser.Parse(this.ProblemDictionary.GetProblem(Problem), Variables);
 
-            XmlElement RootElement = ResponseBody.CreateElement("Return");
-            RootElement.InnerText = this.JavaScriptEngine.Execute(Solution).ToString();
-            ResponseBody.AppendChild(RootElement);
+                RootElement = ResponseBody.CreateElement("Return");
+                RootElement.InnerText = this.JavaScriptEngine.Execute(Solution).ToString();
+                ResponseBody.AppendChild(RootElement);
 
-            return this.BuildResponse(ResponseBody, "http://runtime.azurewebsites.net/Schemas/Return.xsd");
+                return this.BuildResponse(ResponseBody, "http://runtime.azurewebsites.net/Schemas/Return.xsd");
+            }
+            catch (ServiceException ServiceException)
+            {
+                return this.BuildError(ServiceException.HTTPCode, ServiceException.HTTPMessage);
+            }
         }
 
         [HttpGet]//GET /runtime/loop/{start}/{finish}/{iterate}/{Function}/{Parameter} ...
         public HttpResponseMessage GerLoopedSolution(int Start, int Finish, int Iterate, string Accumulator, string Problem, string Variables)
         {
-            string Solution = this.JavaScriptEngine.Execute(
-                this.Parser.Parse(
-                this.ProblemDictionary.GetProblem(
-                Problem),
-                Variables)).ToString();
-
-            string SubSolution = Solution;
-
-            for (int x = Start; x < Finish; x += Iterate)
+            try
             {
-                SubSolution += "/" + this.JavaScriptEngine.Execute(
+                string Solution = this.JavaScriptEngine.Execute(
                     this.Parser.Parse(
                     this.ProblemDictionary.GetProblem(
                     Problem),
-                    Variables)).ToString();
+                    this.Parser.GetIncrement(Variables, Start)
+                    )).ToString();
 
-                SubSolution = this.Parser.Parse(
-                    this.ProblemDictionary.GetProblem(
-                    Accumulator),
-                    SubSolution);
+                string SubSolution = Solution;
+
+                for (int x = Start; x < Finish; x += Iterate)
+                {
+                    SubSolution += "/" + this.JavaScriptEngine.Execute(
+                        this.Parser.Parse(
+                        this.ProblemDictionary.GetProblem(
+                        Problem),
+                        this.Parser.GetIncrement(Variables, x)
+                        )).ToString();
+
+                    SubSolution = this.Parser.Parse(
+                        this.ProblemDictionary.GetProblem(
+                        Accumulator),
+                        SubSolution);
+                }
+
+                SubSolution = this.Parser.Stringify(Solution, SubSolution);
+
+                RootElement = ResponseBody.CreateElement("Return");
+                RootElement.InnerText = this.JavaScriptEngine.Execute(SubSolution).ToString();
+                ResponseBody.AppendChild(RootElement);
+
+                return this.BuildResponse(ResponseBody, "http://runtime.azurewebsites.net/Schemas/Return.xsd");
             }
-
-            SubSolution = this.Parser.Stringify(Solution, SubSolution);
-
-            XmlElement RootElement = ResponseBody.CreateElement("Return");
-            RootElement.InnerText = this.JavaScriptEngine.Execute(SubSolution).ToString();
-            ResponseBody.AppendChild(RootElement);
-
-            return this.BuildResponse(ResponseBody, "http://runtime.azurewebsites.net/Schemas/Return.xsd");
+            catch (ServiceException ServiceException)
+            {
+                return this.BuildError(ServiceException.HTTPCode, ServiceException.HTTPMessage);
+            }
         }
 
         [HttpPost]//POST /runtime/{Function}
         public HttpResponseMessage SetProblem(string Name)
         {
-            XmlDocument XmlDefinition = new XmlDocument();
-            XmlElement RootElement;
-            XmlDefinition.LoadXml(
-                new StreamReader(
-                    HttpContext.Current.Request.InputStream).ReadToEnd(
-                    ));
             try
             {
-                XmlDefinition.Schemas.Add(null, "http://runtime.azurewebsites.net/Schemas/ProblemDefinition.xsd");
-                XmlDefinition.Validate(ValidationCallBack);
-            }
-            catch (Exception ex)
-            {
-                RootElement = ResponseBody.CreateElement("Error");
-                RootElement.InnerText = "Problem definition error";
+                XmlNodeList Function = GetRequestBody();
+                string SubSolution = this.ProblemDictionary.GetProblem(Function[0].Attributes["name"].Value);
+
+                string Solution = RecurseDefineProblem(Function, SubSolution);
+                this.ProblemDictionary.SetProblem(Name, Solution);
+
+                RootElement = ResponseBody.CreateElement("Problem");
+                RootElement.InnerText = Name;
                 ResponseBody.AppendChild(RootElement);
 
-                return this.BuildResponse(ResponseBody, "http://runtime.azurewebsites.net/Schemas/Error.xsd");
+                return this.BuildResponse(ResponseBody, "http://runtime.azurewebsites.net/Schemas/Problem.xsd");
+            }
+            catch (ServiceException ServiceException)
+            {
+                return this.BuildError(ServiceException.HTTPCode, ServiceException.HTTPMessage);
+            }
+        }
+
+        [HttpPut]//PUT /runtime/refactor/{Function}
+        public HttpResponseMessage UpdateProblem(string Name)
+        {
+            try
+            {
+                XmlNodeList Function = GetRequestBody();
+                string SubSolution = this.ProblemDictionary.GetProblem(Function[0].Attributes["name"].Value);
+
+                string Solution = RecurseDefineProblem(Function, SubSolution);
+                this.ProblemDictionary.UpdateProblem(Name, Solution);
+
+                RootElement = ResponseBody.CreateElement("Problem");
+                RootElement.InnerText = Name;
+                ResponseBody.AppendChild(RootElement);
+
+                return this.BuildResponse(ResponseBody, "http://runtime.azurewebsites.net/Schemas/Problem.xsd");
+            }
+            catch (ServiceException ServiceException)
+            {
+                return this.BuildError(ServiceException.HTTPCode, ServiceException.HTTPMessage);
             }
 
-            XmlNodeList Function = XmlDefinition.GetElementsByTagName(
-                "Problem-definition")[0].ChildNodes;
-
-            string SubSolution = this.ProblemDictionary.GetProblem(Function[0].Attributes["name"].Value);
-
-            string Solution = RecurseDefineProblem(Function, SubSolution);
-            this.ProblemDictionary.SetProblem(Name, Solution);
-
-            RootElement = ResponseBody.CreateElement("Problem");
-            RootElement.InnerText = Name;
-            ResponseBody.AppendChild(RootElement);
-
-            return this.BuildResponse(ResponseBody, "http://runtime.azurewebsites.net/Schemas/Problem.xsd");
         }
-
-        [HttpPut]//PUT /api/runtime/{Function}
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
 
         [HttpDelete]//DELETE /runtime/{Function}
         public HttpResponseMessage DeleteProblem(string Problem)
         {
-            XmlElement RootElement = ResponseBody.CreateElement("Removed");
+            try
+            {
+                this.ProblemDictionary.DeleteProblem(Problem);
 
-            this.ProblemDictionary.DeleteFunction(Problem);
-
-            RootElement.InnerText = Problem;
-            ResponseBody.AppendChild(RootElement);
-            return BuildResponse(ResponseBody, "http://runtime.azurewebsites.net/Schemas/Remove.xsd");
+                RootElement = ResponseBody.CreateElement("Removed");
+                RootElement.InnerText = Problem;
+                ResponseBody.AppendChild(RootElement);
+                return BuildResponse(ResponseBody, "http://runtime.azurewebsites.net/Schemas/Remove.xsd");
+            }
+            catch (ServiceException ServiceException)
+            {
+                return this.BuildError(ServiceException.HTTPCode, ServiceException.HTTPMessage);
+            }
         }
 
+        private XmlNodeList GetRequestBody()
+        {
+            XmlDocument XmlDefinition = new XmlDocument();
+            try
+            {
+                XmlDefinition.LoadXml(
+                    new StreamReader(
+                        HttpContext.Current.Request.InputStream).ReadToEnd(
+                        ));
+            }
+            catch (XmlException)
+            {
+                throw new ServiceException(HttpStatusCode.BadRequest, "XML body is not well formed");
+            }
+            this.Parser.ValidateDefinition(XmlDefinition);
+
+            return XmlDefinition.GetElementsByTagName(
+                "Problem-definition")[0].ChildNodes;
+        }
 
         private string RecurseDefineProblem(XmlNodeList Function, string Solution)
         {
@@ -181,11 +241,6 @@ namespace RuntimeIt1.Controllers
             return SubSolution;
         }
 
-        private void ValidationCallBack(object sender, ValidationEventArgs e)
-        {
-            throw new Exception();
-        }
-
         private HttpResponseMessage BuildResponse(XmlDocument ResponseBody, string SchemaName)
         {
             ResponseBody.DocumentElement.SetAttribute("xmlns", SchemaName);
@@ -197,9 +252,22 @@ namespace RuntimeIt1.Controllers
             };
         }
 
-        private void BuildError()
+        private HttpResponseMessage BuildError(HttpStatusCode ErrorCode, string ErrorMessage)
         {
+            XmlDocument ErrorBody = new XmlDocument();
+            RootElement = ErrorBody.CreateElement("Error");
+            RootElement.InnerText = ErrorMessage;
+            ErrorBody.AppendChild(RootElement);
 
+            ErrorBody.DocumentElement.SetAttribute("xmlns", "http://runtime.azurewebsites.net/Schemas/Error.xsd");
+
+            return new HttpResponseMessage()
+            {
+                Content = new StringContent(
+                    ErrorBody.OuterXml,
+                    new UTF8Encoding(), "application/xml"),
+                StatusCode = ErrorCode
+            };
         }
     }
 }

@@ -33,6 +33,20 @@
       <SubType>Content</SubType>
       <DependentUpon>Configuration.classdiagram</DependentUpon>
     </Content>
+    <Content Include="definition_client.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="definition_client.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>definition_client.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="definition_service.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="definition_service.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>definition_service.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="delegate.sequencediagram">
       <SubType>Content</SubType>
     </Content>
@@ -67,6 +81,13 @@
     <Content Include="Logging.classdiagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>Logging.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="looped_delegate.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="looped_delegate.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>looped_delegate.sequencediagram</DependentUpon>
     </Content>
     <Content Include="ModelDefinition\Package1_1118.uml">
       <SubType>Content</SubType>

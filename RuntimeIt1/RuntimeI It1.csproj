@@ -114,7 +114,11 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="XML\Error.xml" />
     <Content Include="XML\Remove.xml" />
+    <None Include="Schemas\Error.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="XML\Functions.xml" />
     <None Include="XML\Parameters.xml" />
     <None Include="XML\Problem.xml" />
@@ -134,6 +138,7 @@
     <Compile Include="Controllers\Parser.cs" />
     <Compile Include="Controllers\Runtime.cs" />
     <Compile Include="Controllers\RuntimeController.cs" />
+    <Compile Include="Exceptions\ServiceException.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

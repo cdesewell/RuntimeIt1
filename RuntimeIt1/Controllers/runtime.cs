@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Jurassic;
+using RuntimeIt1.Exceptions;
+using System.Net;
 namespace RuntimeIt1.Controllers
 {
     public class Runtime
@@ -15,7 +17,14 @@ namespace RuntimeIt1.Controllers
 
         public object Execute(string query)
         {
-            return runtime.Evaluate(query);
+            try
+            {
+                return runtime.Evaluate(query);
+            }
+            catch (Jurassic.JavaScriptException)
+            {
+                throw new ServiceException(HttpStatusCode.BadRequest,"Runtime error check parameter values");
+            }
         }
 
     }

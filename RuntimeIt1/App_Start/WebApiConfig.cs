@@ -26,7 +26,6 @@ namespace RuntimeIt1
                 defaults: new { controller = "runtime", action = "GetParameters" }
                 );
 
-
             config.Routes.MapHttpRoute(
                 name: "LoopedProblemDelegation",
                 routeTemplate: "runtime/loop/{accumulator}/{start}/{finish}/{iterate}/{problem}/{*variables}",
@@ -37,6 +36,12 @@ namespace RuntimeIt1
                 name: "ProblemDefinition",
                 routeTemplate: "runtime/define/{name}",
                 defaults: new { controller = "runtime", action = "SetProblem" }
+                );
+
+            config.Routes.MapHttpRoute(
+                name: "ProblemRefactor",
+                routeTemplate: "runtime/refactor/{name}",
+                defaults: new { controller = "runtime", action = "UpdateProblem" }
                 );
 
             config.Routes.MapHttpRoute(
@@ -66,6 +71,12 @@ namespace RuntimeIt1
             config.Routes.MapHttpRoute(
                 name: "Define",
                 routeTemplate: "{controller}/define/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
+
+            config.Routes.MapHttpRoute(
+                name: "Refactor",
+                routeTemplate: "{controller}/refactor/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
 

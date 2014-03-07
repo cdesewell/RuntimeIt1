@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="42778506-3dd2-4c17-ab71-9e1c1dfbd393" name="delegator" linkedPackageId="6d7aee19-9202-4aae-8ed2-2a7172055771" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="42778506-3dd2-4c17-ab71-9e1c1dfbd393" name="delegator" linkedPackageId="6d7aee19-9202-4aae-8ed2-2a7172055771" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="c3b59388-5185-44a0-a1c2-339966804e39">
+      <profileInstance Id="213f0ebe-e76b-4e7a-971e-7afe52b38d7a" name="CSharpProfile">
+        <elementDefinition Id="e59824ed-04ac-4a5e-ac36-d7cff9e30d0b" />
+      </profileInstance>
+      <elementDefinition Id="ed82627b-5f2f-4aa7-8d42-1a34420cd57a" />
+    </packageHasProfileInstances>
+  </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="5df6ab88-af82-4d8d-914c-e001cbddd557" name="delegator" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -107,16 +115,16 @@ too high</body>
               <lifelineMoniker Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" LastKnownName="Problem Driver" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="1eafec94-86d4-4cb2-b170-08cb219540ef" name="MessageOccurrenceSpecification12">
-            <elementDefinition Id="4089ec3b-cf0d-426f-8f0d-ad1fe0db37a6" />
-            <covered>
-              <lifelineMoniker Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" LastKnownName="Problem Driver" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="fd96e3c6-9088-4c64-9ff9-dce7f79d5b79" name="MessageOccurrenceSpecification11">
             <elementDefinition Id="82823901-891e-4c8c-9ad2-1f9380665154" />
             <covered>
               <lifelineMoniker Id="c8cda517-b7a7-4c1b-9c58-e2a22a07c186" LastKnownName="Application Logic" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="1eafec94-86d4-4cb2-b170-08cb219540ef" name="MessageOccurrenceSpecification12">
+            <elementDefinition Id="4089ec3b-cf0d-426f-8f0d-ad1fe0db37a6" />
+            <covered>
+              <lifelineMoniker Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" LastKnownName="Problem Driver" />
             </covered>
           </messageOccurrenceSpecification>
           <behaviorExecutionSpecification Id="d9bfe7ab-d9a9-4785-8dba-5fcb1676431c" name="BehaviorExecutionSpecification5">
@@ -181,16 +189,16 @@ too high</body>
               <lifelineMoniker Id="df08ab6d-7241-4aeb-afc6-9a1bd4a432fc" LastKnownName="Problem Delegate" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="d028d1fb-efbd-4426-b31d-9fa87e794df5" name="MessageOccurrenceSpecification14">
-            <elementDefinition Id="a2d4b8ae-d49d-422b-b4fb-fc7a81aa6a7a" />
-            <covered>
-              <lifelineMoniker Id="c8cda517-b7a7-4c1b-9c58-e2a22a07c186" LastKnownName="Application Logic" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="01df5442-1a60-4699-a197-f8a0ce09ae43" name="MessageOccurrenceSpecification13">
             <elementDefinition Id="231f29a7-7844-4fa2-8a7a-6ee11a3745ad" />
             <covered>
               <lifelineMoniker Id="8bc8aed4-57ae-489f-ac61-afaeb93fcce6" LastKnownName="Problem Driver" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="d028d1fb-efbd-4426-b31d-9fa87e794df5" name="MessageOccurrenceSpecification14">
+            <elementDefinition Id="a2d4b8ae-d49d-422b-b4fb-fc7a81aa6a7a" />
+            <covered>
+              <lifelineMoniker Id="c8cda517-b7a7-4c1b-9c58-e2a22a07c186" LastKnownName="Application Logic" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="939a68a3-e0d1-4051-8b8d-9cc30ff170e9" name="ExecutionOccurrenceSpecification8">

@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Text.RegularExpressions;
 using System.Xml;
+using System.Xml.Schema;
+using RuntimeIt1.Exceptions;
+using System.Net;
 
 namespace RuntimeIt1.Controllers
 {
@@ -20,6 +23,11 @@ namespace RuntimeIt1.Controllers
         {
             string[] VariablesArray = Variables.Split(new Char[] { '/' });
 
+            if(VariablesArray.Length != this.GetParameterNo(Problem))
+            {
+                throw new ServiceException(HttpStatusCode.BadRequest, "Incorrect number of parameters");
+            }
+
             foreach (string Variable in VariablesArray)
             {
                 Problem = RegexVar.Replace(Problem, Variable, 1);
@@ -29,7 +37,6 @@ namespace RuntimeIt1.Controllers
 
         public string ParseNo(string Problem, string Variable, int No)
         {
-
             MatchCollection Matches = RegexVar.Matches(Problem);
             int VarialeIndex = Matches[No].Index;
             string Solution = Problem.Substring(0, VarialeIndex) + Variable;
@@ -47,7 +54,6 @@ namespace RuntimeIt1.Controllers
 
         public string Stringify(string BaseSolution, string Solution)
         {
-
             if (RegexString.IsMatch(Solution))
             {
                 while (RegexString.IsMatch(Solution))
@@ -63,6 +69,15 @@ namespace RuntimeIt1.Controllers
             string Solution = Variables.Replace("i", Iterator.ToString());
             return Solution;
         }
-
+        public void ValidateDefinition(XmlDocument XmlDefinition)
+        {
+            XmlDefinition.Schemas.Add(null, "http://runtime.azurewebsites.net/Schemas/ProblemDefinition.xsd");
+            XmlDefinition.Validate(
+                (object sender, ValidationEventArgs e) =>
+                {
+                    throw new ServiceException(HttpStatusCode.BadRequest,"Problem definition could not be validated");
+                }
+                );
+        }
     }
 }
