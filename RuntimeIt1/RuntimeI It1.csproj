@@ -54,6 +54,9 @@
     <Reference Include="mysql.web">
       <HintPath>..\..\..\Visual Studio 2013\MySQL\mysql.web.dll</HintPath>
     </Reference>
+    <Reference Include="RouteDebugger">
+      <HintPath>..\packages\routedebugger.2.1.4.0\lib\net40\RouteDebugger.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />

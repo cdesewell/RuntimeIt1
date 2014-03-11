@@ -10,6 +10,40 @@
       handle="viewcode://./CodeSchema_Namespace?Namespace%3DRuntimeIt1"
       tag="ViewCode" />
   </referencesInternal>
+  <importedPackagesInternal>
+    <packageImport
+      Id="ee93abcc-fa8a-4ee2-b67b-255a5e40427d"
+      visibility="Public">
+      <packageMoniker
+        Id="f08a91db-d7c0-4576-9735-8cf17644c7c7"
+        LastKnownName="Logging"
+        LastKnownLocation="Package_1121.uml" />
+    </packageImport>
+    <packageImport
+      Id="4f283d91-5361-49eb-9216-bcbb3aaca36e"
+      visibility="Public">
+      <packageMoniker
+        Id="1c4c2e7c-25c5-42d1-bed0-290f2e62fdbb"
+        LastKnownName="Controllers"
+        LastKnownLocation="Package_1119.uml" />
+    </packageImport>
+    <packageImport
+      Id="599ced63-97cc-4d7c-a467-d5996b0d4f8a"
+      visibility="Public">
+      <packageMoniker
+        Id="3ca545a3-5185-409f-a860-120da75cde16"
+        LastKnownName="Configuration"
+        LastKnownLocation="Package1_1118.uml" />
+    </packageImport>
+    <packageImport
+      Id="44091ce0-37ae-4211-bd21-542aea237be1"
+      visibility="Public">
+      <packageMoniker
+        Id="bb25bf44-b76b-4405-94a8-9368d82d7988"
+        LastKnownName="Models"
+        LastKnownLocation="Package_1225.uml" />
+    </packageImport>
+  </importedPackagesInternal>
   <packagedElements>
     <packageHasNamedElement>
       <packageMoniker
@@ -85,6 +119,56 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="31e90212-6055-4632-b5c5-e838f9b6a667"
+            name="&lt;&lt;Uses&gt;&gt;">
+            <classMoniker
+              Id="9f59922e-156e-4768-91aa-4f8e60641160"
+              LastKnownName="OperandConfigurationCollection"
+              LastKnownLocation="Package1_1118.uml" />
+          </dependency>
+          <dependency
+            Id="b8b41e36-0847-4f2f-8ab3-4c0c0d9a4c19"
+            name="&lt;&lt;Uses&gt;&gt;">
+            <classMoniker
+              Id="df94086f-e9c0-4096-adb2-40845c9160a3"
+              LastKnownName="ServiceLogger"
+              LastKnownLocation="Package_1121.uml" />
+          </dependency>
+          <dependency
+            Id="ad1415c1-0119-4a22-8740-4b55356e55ce"
+            name="&lt;&lt;Creates&gt;&gt;">
+            <classMoniker
+              Id="8d2fbf0c-a13d-4b5b-998f-00abe93a1991"
+              LastKnownName="Runtime"
+              LastKnownLocation="Package_1119.uml" />
+          </dependency>
+          <dependency
+            Id="7cf80077-862f-434e-adda-b6fe883e9d5f"
+            name="&lt;&lt;Creates&gt;&gt;">
+            <classMoniker
+              Id="482cc2c8-25d0-4e96-8cc6-e93d6836c5a9"
+              LastKnownName="ProblemDictinary"
+              LastKnownLocation="Package_1225.uml" />
+          </dependency>
+          <dependency
+            Id="cc2ef795-edd5-44c7-8be1-14df592a52f1"
+            name="&lt;&lt;Creates&gt;&gt;">
+            <classMoniker
+              Id="ec018889-34b9-4d23-97a7-206ca2bfed5f"
+              LastKnownName="Parser"
+              LastKnownLocation="Package_1119.uml" />
+          </dependency>
+          <dependency
+            Id="0f459266-9fbc-41f3-a5ba-60e9573c841a"
+            name="&lt;&lt;uses&gt;&gt;">
+            <classMoniker
+              Id="ea1bf997-b608-400b-b8a6-5283c15a1f20"
+              LastKnownName="HttpContext"
+              LastKnownLocation="RuntimeUML.uml" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="d330bc5f-0273-4ce5-8d9f-0cd662e87d96"
@@ -309,7 +393,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="d1436856-b5d9-48a3-aebb-49a34168c2f8"
+            Id="42f104d6-d6ad-4edb-8e85-3889017114be"
             name="Global"
             isLeaf="false"
             isStatic="false"
@@ -318,54 +402,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="ff1d5110-4423-4bad-899d-37ff4a49e3c0"
+                Id="14151e77-0f09-4469-9f39-590f1aa768ce"
                 handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1 Type%3DGlobal Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="1902bcae-8f20-4008-9744-b97c35a32b61"
+                Id="b39e0de3-7729-4e59-9c03-6135c1907fe4"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="b21991f0-a74e-47c3-9151-75f7b3f209fa">
+                    Id="5a474b7a-be48-410b-b742-9fd7a4b4e896">
                     <propertyInstance
-                      Id="99debb5e-a310-4cfc-98bf-180d6233d8b5"
+                      Id="ad8b3915-8e01-47c8-99a8-17c2629de532"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="40c61159-f52a-49b2-aa08-dded7756f84f">
+                    Id="093a70eb-e63b-4098-9ec8-c40e5d5425ac">
                     <propertyInstance
-                      Id="262b94de-3f4a-48cf-8441-40471327e828"
+                      Id="542b49ae-00a8-4cf5-add7-af8562cfd662"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="8fcaf346-6214-4969-b900-c1f781b40339">
+                    Id="0f2fe9d2-7860-4fe3-abc1-54238020ba1c">
                     <propertyInstance
-                      Id="4d6069d9-ef6d-4c5e-b74f-f0781c11fba4"
+                      Id="1b8fc76e-4912-4d03-aa9e-0e33ffc857db"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="0afaa448-360a-4a43-beb9-5447e6dc3ccc">
+                    Id="b8598523-c4a9-415d-adf8-e112724e1f82">
                     <propertyInstance
-                      Id="cd681bc9-4782-4cfa-ac17-4f2552cc4056"
+                      Id="a5e7b3e1-ca48-44f1-8d8c-26f853b2931a"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="29abf100-7d18-4fde-8fed-d5ced5130797">
+                    Id="d4e5b8ea-3f48-4ed9-9bb2-8b321e83a35b">
                     <propertyInstance
-                      Id="cbf67a19-abc3-4233-812e-e235ebeeee00"
+                      Id="66996dca-f604-4b28-a9cf-0c0aa5cf5bb7"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="913e8080-1649-40e7-aa5c-850bc34c2710">
+                    Id="7b72a2d6-01b1-435f-aed3-43e40f1f38e4">
                     <propertyInstance
-                      Id="e83f603a-10a8-43e8-add5-0ed9b7431105"
+                      Id="300b4231-cfa0-485f-9a41-a06ed5c33472"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -375,6 +459,375 @@
           </operation>
         </ownedOperationsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a03dbf48-d829-43fe-bea4-ac22e38019d1"
+        name="RouteConfig"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a6af55d1-24ba-4076-8eff-ef99d4fee026"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1 Type%3DRouteConfig"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="99c6519a-03ca-45e3-a549-3621e13c42a2"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0dc7292f-ae6c-4bcb-aad7-20f5c1fc19a3">
+                <propertyInstance
+                  Id="84788774-f266-4c81-b2e5-c8c0a7e1d704"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b014eb7f-cf5f-4fd5-bbcf-6f39d750961c">
+                <propertyInstance
+                  Id="a36a333c-1518-4e91-9cc6-aeadb91ae1b3"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a09f9e39-8c2d-4900-a3a2-dffcc369eb49">
+                <propertyInstance
+                  Id="48d1e3c0-b516-4246-a7c2-f1afbead8d36"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4f579f2f-bbe9-41cb-ab98-45ccfed4f7f0">
+                <propertyInstance
+                  Id="c1594c25-0f97-447a-9c8b-80e7f93f8789"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="69e5c715-c897-4c66-bf5f-181ff5136ea7">
+                <propertyInstance
+                  Id="97ecd149-d6c6-4ea0-9dd9-0aaa9b7cb35b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="90c06218-40d6-4aa6-80f4-ff33d6dc3cfa"
+            name="RegisterRoutes"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3e6bde59-9692-4470-a31e-6f2014db91c6"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1 Type%3DRouteConfig Member%3D(Name%3DRegisterRoutes OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Web.dll&quot; Namespace%3DSystem.Web.Routing Type%3DRouteCollection)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="16cb73bb-a6bd-4d2c-9bde-bfd515a2824e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="48f6fb33-c065-4520-b05f-26586646fa6f">
+                    <propertyInstance
+                      Id="ac8ac003-5be7-4228-b0cd-4c31f105ddfc"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78f19b6d-073d-4e59-bdf5-ea89144b48a6">
+                    <propertyInstance
+                      Id="638a55ca-b7bd-4dee-9814-8fe0f22fdce9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="08502888-b236-4613-b073-61fae24853dd">
+                    <propertyInstance
+                      Id="d8d01d7d-6b80-4f24-9ec1-6afebab7874d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="acf96f5c-048f-4225-a621-be3158457dda">
+                    <propertyInstance
+                      Id="e15e404b-40a7-4ce1-be03-f5de5a4d2557"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="48254a1e-4665-4128-90f7-dd13865b5f31">
+                    <propertyInstance
+                      Id="c376f892-db00-4236-ae73-92256ed104f5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c86835fc-2775-4cd2-a364-efc88046a10d">
+                    <propertyInstance
+                      Id="5864e32b-5750-4ef1-8459-07493071c82e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="502f1161-25cb-44d5-9473-3ff29230a7d0"
+                  name="routes"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b9a4719f-06eb-424b-bfef-3a4aefb2a20f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1 Type%3DRouteConfig Member%3D(Name%3DRegisterRoutes OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Web.dll&quot; Namespace%3DSystem.Web.Routing Type%3DRouteCollection)]) ParameterIdentifier%3Droutes"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="576a9043-3f11-46ce-aae3-b2925623e23c"
+                      LastKnownName="RouteCollection"
+                      LastKnownLocation="Package_1211.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a27ca9ea-d258-4149-8da1-12b8a7cea343"
+            name="RouteConfig"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="24a22b74-8a82-4279-b590-be77cb2491cf"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1 Type%3DRouteConfig Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e44511b8-2f83-4cbe-9d33-1d569a23c0b3"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="269902c8-33ca-4303-aed5-244ee1f1c1ea">
+                    <propertyInstance
+                      Id="0c3a86ae-e522-448c-8649-baaa3a0cf3af"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6245b038-0ccf-495b-8df7-f74e19332873">
+                    <propertyInstance
+                      Id="848a9dbd-f1fc-42cc-8e19-a6a3510ebc36"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30b70c12-d8aa-4408-95c2-85fe374dc798">
+                    <propertyInstance
+                      Id="7e15d20b-03d0-473a-88cd-9b5de0ad7d87"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="95486fd7-fc3d-45c4-a181-c91118685560">
+                    <propertyInstance
+                      Id="15bbc85b-e372-4b9c-9902-df71376f7c1a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="671e5b18-72e8-414c-ae3d-39d07763e7ef">
+                    <propertyInstance
+                      Id="499e0864-8d38-45f9-84d5-46ba7090a726"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ddcfdb56-67c6-48b8-ac6e-de7df5a60736">
+                    <propertyInstance
+                      Id="784f446b-80a9-4592-ad1e-67d1bbda9cef"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3c06d881-ff7a-4756-8166-9ed6e85e072f"
+        name="WebApiConfig"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="5214cdf1-95d4-461f-98b4-c1fc61fb3388"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1 Type%3DWebApiConfig"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="bf3289a0-8163-4784-8d64-885b5e0594d1"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4895c445-0966-4325-8232-2e3b4176fa66">
+                <propertyInstance
+                  Id="54a6b4b9-3722-445f-b877-db408ab0aa73"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9fa796f1-b9e4-47ab-9106-00ab0e9ea3ec">
+                <propertyInstance
+                  Id="986bde74-9da8-4e63-bbdf-b2164b52be36"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2db340fe-0041-4c06-8bf7-814ed2f2452d">
+                <propertyInstance
+                  Id="f113039e-1e39-4792-baf4-188dc7670806"
+                  name="IsStatic"
+                  value="True" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e9d172db-5c2d-4d8f-bf01-f9ebdb176df2">
+                <propertyInstance
+                  Id="395d299a-16e5-4f29-8590-b0ee7c762864"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="72a40197-8367-43a3-8f24-87f98489f7ed">
+                <propertyInstance
+                  Id="4c2fedd4-51ef-434f-b19e-e72e06110f8d"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="adc4e04c-fd6b-4042-b0fb-b94efc7271cf"
+            name="Register"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4679b501-673d-48c7-a412-e36f7e6e129a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1 Type%3DWebApiConfig Member%3D(Name%3DRegister OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2Fpackages%2FMicrosoft.AspNet.WebApi.Core.5.0.0%2Flib%2Fnet45%2FSystem.Web.Http.dll Namespace%3DSystem.Web.Http Type%3DHttpConfiguration)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="057fd26a-fa09-4da3-9cc5-8a0684d1dc8b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f87c5b1-cc5c-44ee-ad97-0ffd6c696e4b">
+                    <propertyInstance
+                      Id="707b9a12-a2e3-4b01-a265-f44ded10696e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="11b301a5-3841-484a-9c42-366114a4b1f6">
+                    <propertyInstance
+                      Id="4ad92115-941e-449f-8944-d416c099028e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6bdb9693-e6ee-484f-900c-049f26345bd8">
+                    <propertyInstance
+                      Id="f7245e69-14b2-479b-9965-c6652c952c70"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e0a5b276-f06f-40e1-b87d-a26f6e87da29">
+                    <propertyInstance
+                      Id="dd7e6ecb-3a8d-45d9-931d-aad71f7b6d4a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c1cad10e-e105-4214-a4c6-42bf831741ad">
+                    <propertyInstance
+                      Id="65a1c5fe-419d-4537-8886-b52df009b923"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc40be61-c813-4ddd-a715-6949dfb9f1d0">
+                    <propertyInstance
+                      Id="74d05ced-615e-47e2-bdfe-c457a607b50b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c7e63742-c554-4ea7-809b-b810ec712525"
+                  name="config"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="956db06f-5551-4782-8e16-03abcc3fe881"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1 Type%3DWebApiConfig Member%3D(Name%3DRegister OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2Fpackages%2FMicrosoft.AspNet.WebApi.Core.5.0.0%2Flib%2Fnet45%2FSystem.Web.Http.dll Namespace%3DSystem.Web.Http Type%3DHttpConfiguration)]) ParameterIdentifier%3Dconfig"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="8d094da8-132f-45ab-96a1-54e30040d876"
+                      LastKnownName="HttpConfiguration"
+                      LastKnownLocation="Package1_1211.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="67496df5-d3e5-4d64-a3c2-c0374c3555db"
+        LastKnownName="Exceptions"
+        LastKnownLocation="Package8_1211.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="bb25bf44-b76b-4405-94a8-9368d82d7988"
+        LastKnownName="Models"
+        LastKnownLocation="Package_1225.uml" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

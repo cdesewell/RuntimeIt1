@@ -1,0 +1,753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="bb25bf44-b76b-4405-94a8-9368d82d7988"
+  name="Models"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="15794b28-bca7-4743-b40f-9ba1c397764a"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DRuntimeIt1.Models"
+      tag="ViewCode" />
+  </referencesInternal>
+  <importedPackagesInternal>
+    <packageImport
+      Id="111ced7e-498a-4dfd-898e-827f86dc252c"
+      visibility="Public">
+      <packageMoniker
+        Id="67496df5-d3e5-4d64-a3c2-c0374c3555db"
+        LastKnownName="Exceptions"
+        LastKnownLocation="Package8_1211.uml" />
+    </packageImport>
+  </importedPackagesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="482cc2c8-25d0-4e96-8cc6-e93d6836c5a9"
+        name="ProblemDictinary"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="fe62164f-609c-4484-91c5-d1d79eaaba3c"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1.Models Type%3DProblemDictinary"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c6da1962-9601-47bd-af69-eadead193fe0"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f2202a5d-6c03-4c04-8da7-56adcc96d5b4">
+                <propertyInstance
+                  Id="12aa58fe-2d7c-49a5-bd7a-568edf053a16"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="46a42a99-f358-4861-89fc-f6fcdb08efb6">
+                <propertyInstance
+                  Id="434bbd2c-70a7-4316-b8a9-79efef8811cd"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bb0f7601-920f-42d6-8778-14657d88280e">
+                <propertyInstance
+                  Id="de3b0895-1d79-4758-ab5e-3568bf63d0f3"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3c6628fa-7bc7-42ac-bdbb-1abcf1bc9992">
+                <propertyInstance
+                  Id="0ff57b5f-1ba2-4bdb-b542-2baa03986b6a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b234162b-3ef3-4f35-8d99-7e1b2e0f1b0a">
+                <propertyInstance
+                  Id="779861af-bd7c-47b5-8c38-b7608c9863aa"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="e210da11-0248-4bce-be7b-c0cc017de6e0"
+            isDerived="false"
+            sourceEndRoleName="ProblemDictinary"
+            targetEndRoleName="RuntimeController"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f4c52257-c2d0-4ef9-9ce1-3b52cdab329c"
+              LastKnownName="RuntimeController"
+              LastKnownLocation="Package_1119.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e78d417d-e9ed-49a1-83a6-43223eb5a727"
+                  name="ProblemDictinary"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="334c98c5-f7eb-4ee1-b5df-7da962926b30"
+                  name="RuntimeController"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="03029b5a-8658-443c-bad6-14775f542a4a"
+            name="ProblemDirectory"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="2c5083a4-1f09-4099-8bfc-f6f7becd9320"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1.Models Type%3DProblemDictinary Member%3DProblemDirectory"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="188cfefa-62bd-41da-9e65-bb41ecddb5ae"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b5a124b-616e-4a99-8397-fe76edde4d42">
+                    <propertyInstance
+                      Id="ec42ba3c-31e4-4e1b-8678-1e9707838182"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="65afe66f-c03c-47cf-b73d-554a5ded76a7">
+                    <propertyInstance
+                      Id="02954d7c-f9a6-42fc-b05b-a5bd788651d1"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2b849543-995d-4ec0-a497-ec80355d77e2">
+                    <propertyInstance
+                      Id="90a16c8c-e3cb-436a-8cd9-fa37e0e7a068"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be38198c-c6b0-47ad-b7a4-96aa1364e539">
+                    <propertyInstance
+                      Id="768943d0-fe1d-478d-bb1f-26eed0c3edac"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5a6f0d5-80b6-4727-8acc-4b1d68c649a4">
+                    <propertyInstance
+                      Id="d753ffd6-6bd0-47b9-ac1a-dac6858f4c9e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="68d7ce37-3638-4087-a0d6-1a111b3fecc3"
+                LastKnownName="Dictionary&lt;String‎, String‎&gt;"
+                LastKnownLocation="Package5_1118.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="ca223a44-7ce7-47a6-b2d6-a13f2dfdf379"
+            name="SetProblem"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1c6d9d66-5a42-4d2e-b64d-19e27efd6a37"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1.Models Type%3DProblemDictinary Member%3D(Name%3DSetProblem OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="aadec92b-97ce-4be0-8297-0c5f2aced046"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="511fe898-b965-4f56-baf1-b7d152ed468c">
+                    <propertyInstance
+                      Id="f8866e30-0bce-433e-81d0-03635e57d4ce"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1f804681-4b31-45b1-828c-83838e7a9554">
+                    <propertyInstance
+                      Id="5d27faca-efcf-428c-b5f9-ad7bf8837922"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16d27a5b-f00d-4ea0-86f5-607fd4b3d228">
+                    <propertyInstance
+                      Id="4fc68a73-4931-4cde-a74a-df35784aa247"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3dc34051-048c-4378-98b3-86d2688a11b3">
+                    <propertyInstance
+                      Id="211a89ca-7879-48b0-836d-5bf4fa796c95"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="10638157-9215-48bb-bea3-19df62d8ef6f">
+                    <propertyInstance
+                      Id="d4b33eb2-cb50-4244-be2b-e95e6bfc3f82"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d081fd2f-da16-4956-b4bf-32a3af3aa7cc">
+                    <propertyInstance
+                      Id="d143c1cb-2e55-4736-9cae-0fb8f6cf8418"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="757cd7a0-146a-4616-8c07-71026b6c99b0"
+                  name="ProblemKey"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e4fda9c9-83e7-4897-8012-32217ca68d7d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1.Models Type%3DProblemDictinary Member%3D(Name%3DSetProblem OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DProblemKey"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="RuntimeUML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="60cbac98-695a-4158-bd87-5b5687b42312"
+                  name="ProblemValue"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="80884998-901d-42a4-aded-c7c73c0fc3e5"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1.Models Type%3DProblemDictinary Member%3D(Name%3DSetProblem OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DProblemValue"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="RuntimeUML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="eb60d1af-4e2a-4a05-877a-5a4eb776d894"
+            name="UpdateProblem"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7b785d3d-6cb1-4c56-baf5-67e9e54e7271"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1.Models Type%3DProblemDictinary Member%3D(Name%3DUpdateProblem OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9c6fa5de-a407-4cbd-bedb-e5e000610d7e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4892d09f-5f31-4bc0-b194-df271802166c">
+                    <propertyInstance
+                      Id="04921b01-eb3f-4111-b899-7611025ddfad"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4f1d9e0d-c98e-4032-8db3-357ae91ed2c5">
+                    <propertyInstance
+                      Id="6582da5d-2f5a-43c3-9fd6-e36e3ead4a4c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62c8f7a1-06a6-42de-b163-627ec61b60aa">
+                    <propertyInstance
+                      Id="34302c9a-0b6c-4e7b-9ad2-01c3f0268b80"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5288bba-fc41-423b-afb0-332d04f91866">
+                    <propertyInstance
+                      Id="c3ad8d62-28a3-4b13-884f-ababffc460cc"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df2d7818-2959-4c7a-8e4f-b9e0c1ddea71">
+                    <propertyInstance
+                      Id="7b745c7a-76b6-473b-9cf5-eeb5f92fd40a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="abdee19f-5fcc-454d-b74e-d48dac572c04">
+                    <propertyInstance
+                      Id="e914eef6-feab-4a99-b806-fd188984338b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dd45774e-8258-4273-9c87-6e85ccd0f18c"
+                  name="ProblemKey"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="023db8e6-9665-4327-9e43-a1f808ce3031"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1.Models Type%3DProblemDictinary Member%3D(Name%3DUpdateProblem OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DProblemKey"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="RuntimeUML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="618349ca-330a-4b01-ae27-d05d0d28cf8c"
+                  name="ProblemValue"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="789f5ecf-5061-41fa-9602-b437033c957d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1.Models Type%3DProblemDictinary Member%3D(Name%3DUpdateProblem OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DProblemValue"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="RuntimeUML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f597ec14-6409-4af5-8d73-5adc3b699d9b"
+            name="GetProblem"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c2753dde-4188-457b-8223-9d5dfccf9b6b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1.Models Type%3DProblemDictinary Member%3D(Name%3DGetProblem OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3e803990-0adf-4e4d-a185-11cbcd82779c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7f0e42e4-dd4b-4ead-89a6-afb5c378a9dc">
+                    <propertyInstance
+                      Id="adc6676b-5560-4b85-ab2a-5b4c3d50da6b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e6f7c12a-b43b-408d-93b7-b1047fc1ece2">
+                    <propertyInstance
+                      Id="dbab5e0e-0a23-4915-9a14-58e1f4526486"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7e7caf5a-fbbe-4d37-b0b6-fbd91feabc76">
+                    <propertyInstance
+                      Id="a3cfb80b-69d6-4809-ae46-a887e6adc386"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0d59f1f-eb05-4806-80d2-a5798b927f7c">
+                    <propertyInstance
+                      Id="7cd50614-9f60-4117-b146-e1127f1736be"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0d1b48de-d048-4a50-8e65-c2cedf8ebc5f">
+                    <propertyInstance
+                      Id="0087f3cc-cbaa-47b3-8fe5-753579fa23c4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8f169f2b-e8a2-40a0-973a-a8b81640d272">
+                    <propertyInstance
+                      Id="9709060b-6644-4c24-ab5e-e98ad5082735"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fb4aca88-6045-4fce-ae5b-56bbe7edfa73"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="RuntimeUML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="405675fa-f270-491f-a616-04462b3d3467"
+                  name="ProblemKey"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a25e6192-1a1c-4090-acb7-52d7ef6637d2"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1.Models Type%3DProblemDictinary Member%3D(Name%3DGetProblem OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DProblemKey"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="RuntimeUML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="eb944b5d-f98a-4c94-b8b9-07380fb777ac"
+            name="GetFunctions"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="762bd5b2-1f1e-415a-8f0d-0ecbc123488f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1.Models Type%3DProblemDictinary Member%3DGetFunctions"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="47dc7c99-c9ed-44d0-b14e-4c52803db0dc"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="93766eca-e65c-42d0-9f0e-2c9fe7d63425">
+                    <propertyInstance
+                      Id="cabd4586-20a6-4d70-9de7-e95ea2fa701d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="55c9d635-85d4-4417-843b-a6078bdc6cf6">
+                    <propertyInstance
+                      Id="81cb88fa-f0ae-443b-8d71-a0d48a5fe399"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40680725-92e8-4470-9f22-5c3d226134c5">
+                    <propertyInstance
+                      Id="3f3d5b76-b429-445b-ba37-c05aa9abf097"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba02f436-ddd4-44ff-b68f-9523236fcdbd">
+                    <propertyInstance
+                      Id="17beac37-bdb3-49c3-9961-981d47b2fccb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="691d8e10-c6ea-4670-b35e-8d85606f4fc0">
+                    <propertyInstance
+                      Id="eb4c4f06-6008-4acf-8f07-05bc47c6a52e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="09f237f8-304b-4724-acea-957b28478542">
+                    <propertyInstance
+                      Id="35bbd98c-e758-46cb-a6a7-472516e42a16"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6e779819-6c5e-4382-b363-e26f2bfabab3"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c423ecf4-9c28-4fe6-95ed-7d1630e2f07c"
+                      LastKnownName="List&lt;String‎&gt;"
+                      LastKnownLocation="Package5_1118.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d06bb53f-551c-42d5-bd63-566c168c81ff"
+            name="DeleteProblem"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="af7afee2-7c00-4c3b-b4a2-175d2944e0ea"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1.Models Type%3DProblemDictinary Member%3D(Name%3DDeleteProblem OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="37b60cab-afe4-41ce-91ca-bc3474273981"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f268ebc-20e4-4a5d-ac56-9d2cbb50a682">
+                    <propertyInstance
+                      Id="b16cefb7-6f1a-4c61-8e83-3e9bd0a7ecd2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4a37e5da-11ab-44f5-adf0-120461b2cce9">
+                    <propertyInstance
+                      Id="9be58595-8863-42ab-996c-b59fd439d6cf"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7112f0ee-741a-4c80-af99-e68901f48367">
+                    <propertyInstance
+                      Id="47544997-1070-4c92-b2fd-32b1f1aba8fc"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="96f9fa92-5361-4141-ad62-589e9d86e523">
+                    <propertyInstance
+                      Id="6bc65634-6291-4fdb-9e35-e4ef18cb31c7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3afc9b8a-d89d-4d9b-91f8-73123051993a">
+                    <propertyInstance
+                      Id="031c7d89-5117-49e0-8e5b-7044487fbe60"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c9f0294b-e2ba-4c23-8025-6f056961797f">
+                    <propertyInstance
+                      Id="8f9315cd-71aa-42aa-8c48-d38c6564a883"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b70e797f-69fe-4302-bed2-8182bf24340a"
+                  name="ProblemKey"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7deed6bd-ea77-4cc7-b288-1073ee1b86e4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1.Models Type%3DProblemDictinary Member%3D(Name%3DDeleteProblem OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DProblemKey"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="RuntimeUML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="374f36d4-3ab7-416e-b104-c10e3da044af"
+            name="ProblemDictinary"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0ba8672c-e2de-414a-97e9-e37fb415e9fc"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1.Models Type%3DProblemDictinary Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DDictionary GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cb9d131c-d040-42e9-a65d-6c6c8c28b566"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f577ee1e-7b01-4dbb-ad41-cb16750cb1c7">
+                    <propertyInstance
+                      Id="d1b4d066-0d6a-482a-a1a5-c6d8a1506ec7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f4f7e091-cdae-4823-8865-f2452420ce79">
+                    <propertyInstance
+                      Id="812ccab4-70e5-47cc-9970-9b44779b0c2a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a25feb1a-1881-4243-9c1f-cd96d7ef7bb5">
+                    <propertyInstance
+                      Id="188198e5-ef0f-42ee-aaaf-79f95b0979b8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c7ab704-a67f-4525-a581-eea6d6b93694">
+                    <propertyInstance
+                      Id="17eab674-cd3e-4ac8-b663-be0b1d241d94"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="13a1e6ad-0f0c-4cc8-bb6f-ddb4af61aa2d">
+                    <propertyInstance
+                      Id="f7baef20-dda5-4f7a-b80f-20b03cecb5ab"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cd965961-05be-4fb4-b1f2-81db21bea8fe">
+                    <propertyInstance
+                      Id="87176d1e-f195-49d0-b638-cf5ff93c11de"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="757d172b-114f-49a3-9458-d4cb0fd1ddb6"
+                  name="ProblemDirectory"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="418fe88f-2803-4e12-bba6-1d43a0102e95"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FGitHub%2FRuntimeIt1%2FRuntimeIt1%2Fbin%2FRuntimeIt1.dll Namespace%3DRuntimeIt1.Models Type%3DProblemDictinary Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DDictionary GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))]) ParameterIdentifier%3DProblemDirectory"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="68d7ce37-3638-4087-a0d6-1a111b3fecc3"
+                      LastKnownName="Dictionary&lt;String‎, String‎&gt;"
+                      LastKnownLocation="Package5_1118.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

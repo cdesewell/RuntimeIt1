@@ -1,66 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
-  Id="daf8cc85-2bca-4967-965e-c75574d26659"
-  name="Web"
+  Id="2ab91024-cbf1-4595-b7a6-ba4071ebb1b6"
+  name="Jurassic"
   visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <referencesInternal>
     <reference
-      Id="0719d78d-20ae-4d4b-aa3b-7cf1dea18d05"
-      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Web"
+      Id="4fbdb677-92dd-4609-9f93-73ee748aaaff"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DJurassic"
       tag="ViewCode" />
   </referencesInternal>
   <packagedElements>
     <packageHasNamedElement>
       <class
-        Id="c0576a2f-5ae4-4d23-bb8f-76a166b7a23c"
-        name="HttpApplication"
+        Id="1ac71a87-fd48-428a-98c3-01509850d823"
+        name="ScriptEngine"
         isAbstract="false"
-        isLeaf="false"
+        isLeaf="true"
         isActiveClass="false">
         <referencesInternal>
           <reference
-            Id="a7d22835-7b56-417c-9b39-86f9934520df"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Web.dll&quot; Namespace%3DSystem.Web Type%3DHttpApplication"
+            Id="6346b8a5-e9c7-45c6-809e-1f085b1d1c2b"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FChris%2FDocuments%2FVisual Studio 2013%2FJurassic%2FJurassic.dll&quot; Namespace%3DJurassic Type%3DScriptEngine"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
           <stereotypeInstance
-            Id="c1e5a15c-1b36-4a32-be00-72f87375bdcf"
+            Id="75c318dc-c6fc-42e2-a13f-209b077dc821"
             name="class"
             profile="CSharpProfile">
             <propertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="095c0679-f0ab-42b9-968a-c6817c6ef581">
+                Id="c8033e0f-8a54-4ff6-aa85-2afacfd8a9c1">
                 <propertyInstance
-                  Id="8d0dfe95-f63d-4a63-8d7a-3fd8d44fe55c"
+                  Id="13ab3383-40c4-448e-8eb8-4348c7ad45a4"
                   name="ClrAttributes" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="1f2a29f4-88fd-4808-a3c2-b16305ac9997">
+                Id="5d426a98-2b37-435f-89ef-4a4a5284cd12">
                 <propertyInstance
-                  Id="56b6b80b-107e-4777-9686-20d540f7dd95"
+                  Id="365f4cb2-5e12-4602-b16f-308e17e1dd13"
                   name="IsPartial"
                   value="false" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="c0e0d561-20c2-4574-8112-ee4887cf2cd4">
+                Id="19f37d7f-73c8-4106-902d-deaf53ddc192">
                 <propertyInstance
-                  Id="eb2864ad-d254-497f-9ae3-554c1a9ee874"
+                  Id="5ac0640e-5aec-42f2-8676-01d781000b01"
                   name="IsStatic"
                   value="False" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="186e9ae4-1e84-4b4d-97af-4c5130df1c55">
+                Id="42e75678-369c-4dea-97cd-db770a1fdaf5">
                 <propertyInstance
-                  Id="7e7320ae-878c-46a8-9d88-1a55fee9d794"
+                  Id="7b463256-86b5-45c4-94af-c5bddc4b85ca"
                   name="IsUnsafe"
                   value="false" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="4856a7f6-2501-47aa-9662-f59ad6cf9657">
+                Id="2b286f18-5526-42bb-b80e-2efab09fde4e">
                 <propertyInstance
-                  Id="5fdbd63e-c425-44ab-af84-bd468f9400c7"
+                  Id="7e72ebfc-381a-4010-843b-749fa609e656"
                   name="PackageVisibility"
                   value="internal" />
               </stereotypeInstanceHasPropertyInstances>
@@ -68,18 +68,6 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
       </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <packageMoniker
-        Id="1df9ef7f-1574-4df9-acf8-21338eb1e2a8"
-        LastKnownName="Routing"
-        LastKnownLocation="Package_1211.uml" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <packageMoniker
-        Id="cf55f05e-49c9-46d0-8ccb-b9bb012c1c1a"
-        LastKnownName="Http"
-        LastKnownLocation="Package1_1211.uml" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

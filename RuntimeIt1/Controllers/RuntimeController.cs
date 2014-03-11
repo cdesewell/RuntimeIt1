@@ -7,11 +7,12 @@ using System.Web.Http;
 using System.Web;
 using System.Xml;
 using System.Text;
-using RuntimeIt1.Logging;
 using System.Xml.Schema;
 using System.IO;
 using System.Web.Http.Controllers;
+
 using RuntimeIt1.Exceptions;
+using RuntimeIt1.Models;
 
 namespace RuntimeIt1.Controllers
 {
@@ -22,7 +23,7 @@ namespace RuntimeIt1.Controllers
         HttpContext.Current.Application["ProblemDictionary"] as ProblemDictinary;
         private Parser Parser =
         HttpContext.Current.Application["Parser"] as Parser;
-        private Runtime JavaScriptEngine =
+        private Runtime Runtime =
         HttpContext.Current.Application["Runtime"] as Runtime;
         private XmlDocument ResponseBody = new XmlDocument();
         XmlElement RootElement;
@@ -79,7 +80,7 @@ namespace RuntimeIt1.Controllers
                 string Solution = this.Parser.Parse(this.ProblemDictionary.GetProblem(Problem), Variables);
 
                 RootElement = ResponseBody.CreateElement("Return");
-                RootElement.InnerText = this.JavaScriptEngine.Execute(Solution).ToString();
+                RootElement.InnerText = this.Runtime.Execute(Solution);
                 ResponseBody.AppendChild(RootElement);
 
                 return this.BuildResponse(ResponseBody, "http://runtime.azurewebsites.net/Schemas/Return.xsd");
@@ -95,23 +96,23 @@ namespace RuntimeIt1.Controllers
         {
             try
             {
-                string Solution = this.JavaScriptEngine.Execute(
+                string Solution = this.Runtime.Execute(
                     this.Parser.Parse(
                     this.ProblemDictionary.GetProblem(
                     Problem),
                     this.Parser.GetIncrement(Variables, Start)
-                    )).ToString();
+                    ));
 
                 string SubSolution = Solution;
 
                 for (int x = Start; x < Finish; x += Iterate)
                 {
-                    SubSolution += "/" + this.JavaScriptEngine.Execute(
+                    SubSolution += "/" + this.Runtime.Execute(
                         this.Parser.Parse(
                         this.ProblemDictionary.GetProblem(
                         Problem),
                         this.Parser.GetIncrement(Variables, x)
-                        )).ToString();
+                        ));
 
                     SubSolution = this.Parser.Parse(
                         this.ProblemDictionary.GetProblem(
@@ -122,7 +123,7 @@ namespace RuntimeIt1.Controllers
                 SubSolution = this.Parser.Stringify(Solution, SubSolution);
 
                 RootElement = ResponseBody.CreateElement("Return");
-                RootElement.InnerText = this.JavaScriptEngine.Execute(SubSolution).ToString();
+                RootElement.InnerText = this.Runtime.Execute(SubSolution);
                 ResponseBody.AppendChild(RootElement);
 
                 return this.BuildResponse(ResponseBody, "http://runtime.azurewebsites.net/Schemas/Return.xsd");
@@ -157,6 +158,7 @@ namespace RuntimeIt1.Controllers
         }
 
         [HttpPut]//PUT /runtime/refactor/{Function}
+        [ActionName("Problem")]
         public HttpResponseMessage UpdateProblem(string Name)
         {
             try
@@ -181,6 +183,7 @@ namespace RuntimeIt1.Controllers
         }
 
         [HttpDelete]//DELETE /runtime/{Function}
+        [ActionName("Problem")]
         public HttpResponseMessage DeleteProblem(string Problem)
         {
             try

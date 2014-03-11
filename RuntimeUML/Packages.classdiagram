@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="357faca6-03ec-471d-a438-65c5f190afe5" name="Packages" linkedPackageId="737ab47f-ba1d-4361-8bf1-195b79f5e7ce" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="968a3528-4fb7-416b-b8bc-4ddc941b8284" name="RuntimeIt1" visibility="Private">
+        <referencesInternal>
+          <reference Id="9de7d9ac-8a07-4016-95de-bb3a4089e3c4" handle="viewcode://./CodeSchema_Namespace?Namespace%3DRuntimeIt1" tag="ViewCode">
+            <elementDefinition Id="9b63b6cb-ca61-4fce-b35f-9ebdc8599197" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="38114a56-ef4b-4759-901b-bf44db32c925" />
+        <importedPackagesInternal>
+          <packageImport Id="7729fdcf-8ca9-4d4c-a76b-dcba97c1de68" visibility="Public">
+            <packageMoniker Id="b92e1d0c-b9c2-433a-9450-40365fcaba6d" LastKnownName="Logging" />
+            <elementDefinition Id="ee93abcc-fa8a-4ee2-b67b-255a5e40427d" />
+          </packageImport>
+          <packageImport Id="249189d5-0ffe-415d-9eca-34328532af5e" visibility="Public">
+            <packageMoniker Id="68d957ca-a3f4-400f-b6f7-e8f9de84fc44" LastKnownName="Controllers" />
+            <elementDefinition Id="4f283d91-5361-49eb-9216-bcbb3aaca36e" />
+          </packageImport>
+          <packageImport Id="f239ace5-e004-4673-b6a7-51b8c0ab4d4a" visibility="Public">
+            <packageMoniker Id="c95e4f58-3d9b-4525-8066-eb598f551c30" LastKnownName="Configuration" />
+            <elementDefinition Id="599ced63-97cc-4d7c-a467-d5996b0d4f8a" />
+          </packageImport>
+          <packageImport Id="e0417856-84b1-4c45-9618-bdc82a961000" visibility="Public">
+            <packageMoniker Id="deb5b066-9b3a-4009-8be1-1390737abfeb" LastKnownName="Models" />
+            <elementDefinition Id="44091ce0-37ae-4211-bd21-542aea237be1" />
+          </packageImport>
+        </importedPackagesInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="c95e4f58-3d9b-4525-8066-eb598f551c30" name="Configuration" visibility="Private">
+        <referencesInternal>
+          <reference Id="8830a8a3-51aa-42a1-b8d3-fa0278119cf5" handle="viewcode://./CodeSchema_Namespace?Namespace%3DRuntimeIt1.Configuration" tag="ViewCode">
+            <elementDefinition Id="36d05ad5-6384-475c-bbf9-5e5aa8772297" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="3ca545a3-5185-409f-a860-120da75cde16" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="68d957ca-a3f4-400f-b6f7-e8f9de84fc44" name="Controllers" visibility="Private">
+        <referencesInternal>
+          <reference Id="c00aa971-77de-41c1-b968-b02b160ed796" handle="viewcode://./CodeSchema_Namespace?Namespace%3DRuntimeIt1.Controllers" tag="ViewCode">
+            <elementDefinition Id="a5e76660-b3e2-482c-8673-af7420710095" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="1c4c2e7c-25c5-42d1-bed0-290f2e62fdbb" />
+        <importedPackagesInternal>
+          <packageImport Id="aaea0452-869f-4c98-b9c6-34d8a9f04a47" visibility="Public">
+            <packageMoniker Id="deb5b066-9b3a-4009-8be1-1390737abfeb" LastKnownName="Models" />
+            <elementDefinition Id="54aaf582-7cd7-4415-9d9d-66795236b42f" />
+          </packageImport>
+          <packageImport Id="9fa6d7b0-e86c-471d-945e-acc453ef5d62" visibility="Public">
+            <packageMoniker Id="5c9ca2fe-19b4-482f-b39d-ada30126f97a" LastKnownName="Exceptions" />
+            <elementDefinition Id="b0e967e8-ece8-4a55-a46c-fbb11d408ab8" />
+          </packageImport>
+        </importedPackagesInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="5c9ca2fe-19b4-482f-b39d-ada30126f97a" name="Exceptions" visibility="Private">
+        <referencesInternal>
+          <reference Id="0c28db76-6f6d-4e0b-ab9a-24349e1b5a30" handle="viewcode://./CodeSchema_Namespace?Namespace%3DRuntimeIt1.Exceptions" tag="ViewCode">
+            <elementDefinition Id="09ee0124-81ce-4d3e-a53d-443e2cb1638a" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="67496df5-d3e5-4d64-a3c2-c0374c3555db" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="b92e1d0c-b9c2-433a-9450-40365fcaba6d" name="Logging" visibility="Private">
+        <referencesInternal>
+          <reference Id="6e1a7f62-a78a-4ab4-ae01-a777e972a6be" handle="viewcode://./CodeSchema_Namespace?Namespace%3DRuntimeIt1.Logging" tag="ViewCode">
+            <elementDefinition Id="3b16cdfc-ced5-4d37-8f51-f629393c1f89" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="f08a91db-d7c0-4576-9735-8cf17644c7c7" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="deb5b066-9b3a-4009-8be1-1390737abfeb" name="Models" visibility="Private">
+        <referencesInternal>
+          <reference Id="95191ef3-d393-450b-ab35-cc36281b499c" handle="viewcode://./CodeSchema_Namespace?Namespace%3DRuntimeIt1.Models" tag="ViewCode">
+            <elementDefinition Id="15794b28-bca7-4743-b40f-9ba1c397764a" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="bb25bf44-b76b-4405-94a8-9368d82d7988" />
+        <importedPackagesInternal>
+          <packageImport Id="c2f9508c-4dd1-48f8-8f9f-a6c107dce109" visibility="Public">
+            <packageMoniker Id="5c9ca2fe-19b4-482f-b39d-ada30126f97a" LastKnownName="Exceptions" />
+            <elementDefinition Id="111ced7e-498a-4dfd-898e-827f86dc252c" />
+          </packageImport>
+        </importedPackagesInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="737ab47f-ba1d-4361-8bf1-195b79f5e7ce" name="RuntimeUML">
+    <elementDefinition Id="58523316-dad1-4ff4-91c0-3fd7ca162ff1" />
+    <profileInstances>
+      <packageHasProfileInstances Id="50426294-4d76-4f4b-a1d9-e6e207503faf">
+        <profileInstance Id="0a796ebb-3228-43a8-ad19-852a762c3f9a" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="08cb177e-1294-443b-b622-988b4cbeade6">
+        <profileInstance Id="f93b8937-da0b-46aa-95be-3906f352a5d1" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="45c63adc-1d14-4d1e-bca2-8487893e137a">
+        <profileInstance Id="ec803682-8332-46a3-bbcf-39ee7aaea94f" name="CSharpProfile">
+          <elementDefinition Id="e59824ed-04ac-4a5e-ac36-d7cff9e30d0b" />
+        </profileInstance>
+        <elementDefinition Id="ed82627b-5f2f-4aa7-8d42-1a34420cd57a" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

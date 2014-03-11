@@ -1,66 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
-  Id="daf8cc85-2bca-4967-965e-c75574d26659"
-  name="Web"
+  Id="184f7c8e-7cd8-49ff-9909-dd6b0b242cec"
+  name="Http"
   visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <referencesInternal>
     <reference
-      Id="0719d78d-20ae-4d4b-aa3b-7cf1dea18d05"
-      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Web"
+      Id="3c96abe6-88ee-4c17-9711-70f082ec4a54"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Net.Http"
       tag="ViewCode" />
   </referencesInternal>
   <packagedElements>
     <packageHasNamedElement>
       <class
-        Id="c0576a2f-5ae4-4d23-bb8f-76a166b7a23c"
-        name="HttpApplication"
+        Id="45c865c6-baa7-423d-aa6f-13fe5be2ebc6"
+        name="HttpResponseMessage"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <referencesInternal>
           <reference
-            Id="a7d22835-7b56-417c-9b39-86f9934520df"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Web.dll&quot; Namespace%3DSystem.Web Type%3DHttpApplication"
+            Id="966bfca4-f488-4336-9562-a59de9d4a981"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Net.Http.dll&quot; Namespace%3DSystem.Net.Http Type%3DHttpResponseMessage"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
           <stereotypeInstance
-            Id="c1e5a15c-1b36-4a32-be00-72f87375bdcf"
+            Id="39f4a7e1-9d9e-40ab-8056-c07b45116980"
             name="class"
             profile="CSharpProfile">
             <propertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="095c0679-f0ab-42b9-968a-c6817c6ef581">
+                Id="c7668987-7148-4413-9c83-ebe6de46886c">
                 <propertyInstance
-                  Id="8d0dfe95-f63d-4a63-8d7a-3fd8d44fe55c"
+                  Id="6ff7fdaa-8c28-4b8a-988e-691d289b72af"
                   name="ClrAttributes" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="1f2a29f4-88fd-4808-a3c2-b16305ac9997">
+                Id="931d070d-973d-45d4-bdd3-1a033cf18f0d">
                 <propertyInstance
-                  Id="56b6b80b-107e-4777-9686-20d540f7dd95"
+                  Id="58273195-1525-4d56-adc2-2588b119ceba"
                   name="IsPartial"
                   value="false" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="c0e0d561-20c2-4574-8112-ee4887cf2cd4">
+                Id="93bfd49f-40a4-4418-945c-dcf3a6073004">
                 <propertyInstance
-                  Id="eb2864ad-d254-497f-9ae3-554c1a9ee874"
+                  Id="cc7bedb7-98ae-4848-9c99-fd753877dfed"
                   name="IsStatic"
                   value="False" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="186e9ae4-1e84-4b4d-97af-4c5130df1c55">
+                Id="dd49220a-106f-4a7e-89d0-e51f61ab34ca">
                 <propertyInstance
-                  Id="7e7320ae-878c-46a8-9d88-1a55fee9d794"
+                  Id="0f3d739f-a193-4e21-9055-6fc2f11055db"
                   name="IsUnsafe"
                   value="false" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="4856a7f6-2501-47aa-9662-f59ad6cf9657">
+                Id="e9d4ce64-35ad-43db-8484-ded8975c8366">
                 <propertyInstance
-                  Id="5fdbd63e-c425-44ab-af84-bd468f9400c7"
+                  Id="b06b6fdc-8c13-437e-a052-99023285c338"
                   name="PackageVisibility"
                   value="internal" />
               </stereotypeInstanceHasPropertyInstances>
@@ -68,18 +68,6 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
       </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <packageMoniker
-        Id="1df9ef7f-1574-4df9-acf8-21338eb1e2a8"
-        LastKnownName="Routing"
-        LastKnownLocation="Package_1211.uml" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <packageMoniker
-        Id="cf55f05e-49c9-46d0-8ccb-b9bb012c1c1a"
-        LastKnownName="Http"
-        LastKnownLocation="Package1_1211.uml" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

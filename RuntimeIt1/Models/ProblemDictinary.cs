@@ -4,28 +4,23 @@ using System.Linq;
 using System.Web;
 using System.Collections.Specialized;
 using System.Configuration;
-using RuntimeIt1.Configuration;
 using System.Text.RegularExpressions;
 using System.Xml;
-using RuntimeIt1.Exceptions;
 using System.Net;
 
-namespace RuntimeIt1.Controllers
+using RuntimeIt1.Exceptions;
+
+namespace RuntimeIt1.Models
 {
 
     public class ProblemDictinary
     {
         public Dictionary<string, string> ProblemDirectory;
-        public ProblemDictinary(OperandConfigurationSection CoreOperands)
+        public ProblemDictinary(Dictionary<string,string> ProblemDirectory)
         {
-            ProblemDirectory = new Dictionary<string, string>();
-
-            foreach (OperandConfigurationElement Operand in CoreOperands.Operands)
-            {
-                ProblemDirectory.Add(Operand.Name, Operand.Symbol);
-            }
-
+            this.ProblemDirectory = ProblemDirectory;
         }
+
         public void SetProblem(string ProblemKey, string ProblemValue)
         {
             if (ProblemDirectory.ContainsKey(ProblemKey))

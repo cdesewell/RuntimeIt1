@@ -8,7 +8,7 @@ namespace RuntimeIt1.Configuration
 {
     public class OperandConfigurationElement : ConfigurationElement
     {
-        [ConfigurationProperty("Name",IsKey=true)]
+        [ConfigurationProperty("Name", IsKey = true)]
         public string Name
         {
             get

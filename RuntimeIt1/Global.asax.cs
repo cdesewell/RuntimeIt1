@@ -8,10 +8,12 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
 using System.Threading.Tasks;
+using System.Configuration;
+
 using RuntimeIt1.Logging;
 using RuntimeIt1.Controllers;
-using System.Configuration;
 using RuntimeIt1.Configuration;
+using RuntimeIt1.Models;
 
 namespace RuntimeIt1
 {
@@ -24,7 +26,15 @@ namespace RuntimeIt1
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            HttpContext.Current.Application["ProblemDictionary"] = new ProblemDictinary(ConfigurationManager.GetSection("RuntimeCoreOperands") as OperandConfigurationSection);
+            Dictionary<string, string> ProblemDirectory = new Dictionary<string, string>();
+            OperandConfigurationSection CoreOperands = ConfigurationManager.GetSection("RuntimeCoreOperands") 
+                as OperandConfigurationSection;
+            foreach (OperandConfigurationElement Operand in CoreOperands.Operands)
+            {
+                ProblemDirectory.Add(Operand.Name, Operand.Symbol);
+            }
+
+            HttpContext.Current.Application["ProblemDictionary"] = new ProblemDictinary(ProblemDirectory);
             HttpContext.Current.Application["Parser"] = new Parser("var","'");
             HttpContext.Current.Application["Runtime"] = new Runtime();
         }

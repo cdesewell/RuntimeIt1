@@ -1,66 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
-  Id="daf8cc85-2bca-4967-965e-c75574d26659"
-  name="Web"
+  Id="c9065e06-9f66-4d8a-a21a-50a006586f36"
+  name="RegularExpressions"
   visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <referencesInternal>
     <reference
-      Id="0719d78d-20ae-4d4b-aa3b-7cf1dea18d05"
-      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Web"
+      Id="e9dbf0d1-7fd3-47a5-a37e-600ccfea7fc9"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Text.RegularExpressions"
       tag="ViewCode" />
   </referencesInternal>
   <packagedElements>
     <packageHasNamedElement>
       <class
-        Id="c0576a2f-5ae4-4d23-bb8f-76a166b7a23c"
-        name="HttpApplication"
+        Id="cbcd4dd3-66b7-4ec7-8300-54d9053492f5"
+        name="Regex"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <referencesInternal>
           <reference
-            Id="a7d22835-7b56-417c-9b39-86f9934520df"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Web.dll&quot; Namespace%3DSystem.Web Type%3DHttpApplication"
+            Id="460bfbe3-9e3f-45c7-9f4a-81223415dd45"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.dll&quot; Namespace%3DSystem.Text.RegularExpressions Type%3DRegex"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
           <stereotypeInstance
-            Id="c1e5a15c-1b36-4a32-be00-72f87375bdcf"
+            Id="b2406c60-8355-4694-9fdb-8fe7e427400d"
             name="class"
             profile="CSharpProfile">
             <propertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="095c0679-f0ab-42b9-968a-c6817c6ef581">
+                Id="05804a92-4cdf-4db2-8f44-0d69ddc54a19">
                 <propertyInstance
-                  Id="8d0dfe95-f63d-4a63-8d7a-3fd8d44fe55c"
+                  Id="36ba181c-a65b-4ac9-8bde-518ea571abbf"
                   name="ClrAttributes" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="1f2a29f4-88fd-4808-a3c2-b16305ac9997">
+                Id="e4e86ba2-ca8b-4ae0-a73d-dbf60b3cf260">
                 <propertyInstance
-                  Id="56b6b80b-107e-4777-9686-20d540f7dd95"
+                  Id="9e55ac52-a463-41e0-900d-f5908b841678"
                   name="IsPartial"
                   value="false" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="c0e0d561-20c2-4574-8112-ee4887cf2cd4">
+                Id="172c2853-8f47-4927-a99e-c3c681316dc1">
                 <propertyInstance
-                  Id="eb2864ad-d254-497f-9ae3-554c1a9ee874"
+                  Id="a70bb26b-d3e4-430b-93d9-cb305fb52d89"
                   name="IsStatic"
                   value="False" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="186e9ae4-1e84-4b4d-97af-4c5130df1c55">
+                Id="dfb13fc1-c413-44a6-8d64-e2932cfe164d">
                 <propertyInstance
-                  Id="7e7320ae-878c-46a8-9d88-1a55fee9d794"
+                  Id="38f00a51-fac0-49be-8eee-67a7286a45e9"
                   name="IsUnsafe"
                   value="false" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="4856a7f6-2501-47aa-9662-f59ad6cf9657">
+                Id="86a282ca-7d84-40f7-99df-02e7e13c9bd4">
                 <propertyInstance
-                  Id="5fdbd63e-c425-44ab-af84-bd468f9400c7"
+                  Id="a77de125-68a4-44dc-b149-545f04759545"
                   name="PackageVisibility"
                   value="internal" />
               </stereotypeInstanceHasPropertyInstances>
@@ -68,18 +68,6 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
       </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <packageMoniker
-        Id="1df9ef7f-1574-4df9-acf8-21338eb1e2a8"
-        LastKnownName="Routing"
-        LastKnownLocation="Package_1211.uml" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <packageMoniker
-        Id="cf55f05e-49c9-46d0-8ccb-b9bb012c1c1a"
-        LastKnownName="Http"
-        LastKnownLocation="Package1_1211.uml" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

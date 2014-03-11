@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Exceptions">
+  <logicalClassDesignerModelMoniker Id="7483981e-daa8-495c-afe6-960a95e6e6cf" />
+  <nestedChildShapes>
+    <classShape Id="5f08a048-451e-4a7a-becc-2ba391b88aac" absoluteBounds="0.5, 1.5, 4.25, 1.5081481095155085" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+      <classMoniker Id="c2c5fe99-758e-4c8c-a788-24400afc4325" LastKnownName="ServiceException" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="327de5d6-e0c5-497a-a3e4-36fcb6ce31f3" absoluteBounds="0.515, 2.0153356393178306, 4.2200000000000006, 0.52148435761531176" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="bc4e6d49-1069-4a56-83e4-072ef1fb1fd2" absoluteBounds="0.515, 2.5468199969331424, 4.2200000000000006, 0.36132811258236575" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>
