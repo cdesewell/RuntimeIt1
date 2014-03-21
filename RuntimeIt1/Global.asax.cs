@@ -38,6 +38,7 @@ namespace RuntimeIt1
             HttpContext.Current.Application["Parser"] = new Parser("var","'");
             HttpContext.Current.Application["Runtime"] = new Runtime();
         }
+
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
             var Context = sender as HttpApplication;
